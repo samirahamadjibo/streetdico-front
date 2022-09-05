@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "streetdico-front": "apps/streetdico-front",
+    "streetdico-front-e2e": "apps/streetdico-front-e2e"
+  }
+}
