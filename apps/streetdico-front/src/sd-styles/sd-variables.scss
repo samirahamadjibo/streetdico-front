@@ -1,25 +1,6 @@
 
 $primary:       #5045E2;
-$secondary:     #F8E661 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
+$secondary:     #F8E661;
 $black:         black;
 
-@font-face {
-    font-family: "Copperplate";
-    src: url("../assets/fonts/copperplate/OPTICopperplate.otf") format("otf"),
-}
-@font-face {
-    font-family: "Montserrat";
-    src: url("../assets/fonts/montserrat/Montserrat-Regular.otf") format("otf"),
-}
 
-$font-family-sans-serif-headers:      "Copperplate", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-sans-serif-body:      "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-sans-serif:      "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-$headings-font-family:      $font-family-sans-serif-headers;
-$display-font-family:       $font-family-sans-serif-body;

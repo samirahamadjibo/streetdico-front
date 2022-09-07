@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Copperplate';
+    src: url("../assets/fonts/copperplate/OPTICopperplate.otf")
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+}
+
+$font-family-sans-serif-headers:      'Copperplate', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif-body:      'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif:      'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$headings-font-family:      $font-family-sans-serif-headers;
+$display-font-family:       $font-family-sans-serif-body;
+
+ul{
+    list-style-type: none
+}
+
+.sd-color-white{
+    color: white;
+}
+.sd-bg-black{
+    background-color: black;
+}
+
+.sd-btn{
+    @extend .btn;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+}
+
+.sd-btn-primary{
+    @extend .btn-primary;
+    @extend .sd-btn;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.sd-btn-outline{
+    @extend .btn-outline-primary;
+    @extend .sd-btn;
+    border-color: white;
+    color: white;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Copperplate';
+}
