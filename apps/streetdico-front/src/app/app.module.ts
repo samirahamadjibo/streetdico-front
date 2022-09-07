@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { WordComponent } from './components/shared/units/word/word.component';
@@ -16,7 +17,7 @@ import { HeaderHomeComponent } from './components/shared/core/header-home/header
     HeaderSimpleComponent,
     HeaderHomeComponent,
   ],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent],
 })
