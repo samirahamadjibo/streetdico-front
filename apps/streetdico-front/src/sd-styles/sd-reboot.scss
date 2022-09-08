@@ -31,6 +31,9 @@ ul{
 .sd-color-white{
     color: white;
 }
+.sd-color-secondary{
+    color: $secondary;
+}
 .sd-bg-black{
     background-color: black;
     font-weight: 100
@@ -77,7 +80,6 @@ h1, h2, h3, h4, h5, h6{
     border-bottom-right-radius: 10px !important;
 }
 ::placeholder{
-    color: black !important;
     font-size: $font-size-sm;
 }
 
