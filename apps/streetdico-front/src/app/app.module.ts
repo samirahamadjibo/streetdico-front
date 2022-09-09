@@ -8,6 +8,7 @@ import { WordComponent } from './components/shared/units/word/word.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderSimpleComponent } from './components/shared/core/header-simple/header-simple.component';
 import { HeaderHomeComponent } from './components/shared/core/header-home/header-home.component';
+import { FooterComponent } from './components/shared/core/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HeaderHomeComponent } from './components/shared/core/header-home/header
     HomeComponent,
     HeaderSimpleComponent,
     HeaderHomeComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, HttpClientModule, MatIconModule],
   providers: [],

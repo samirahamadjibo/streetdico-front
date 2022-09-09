@@ -3,8 +3,29 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+.footer-logo{
+    width: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 .home-stripes {
     right: -84px !important;
     bottom: -90px !important;
+}
+
+
+.sd-form-control.search-bar{
+    @extend .form-control;
+    line-height: 2.2;
+    border: white;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+.sd-form-control.footer-search-bar{
+    @extend .sd-form-control, .search-bar;
+    line-height: 1.8;
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    font-size: $font-size-sm;
 }
