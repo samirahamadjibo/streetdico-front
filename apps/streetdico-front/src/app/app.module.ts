@@ -10,6 +10,7 @@ import { HeaderSimpleComponent } from './components/shared/core/header-simple/he
 import { HeaderHomeComponent } from './components/shared/core/header-home/header-home.component';
 import { FooterComponent } from './components/shared/core/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderSimpleComponent,
     HeaderHomeComponent,
     FooterComponent,
+    UserComponent,
   ],
   imports: [BrowserModule, HttpClientModule, MatIconModule, AppRoutingModule],
   providers: [],
