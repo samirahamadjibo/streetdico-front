@@ -1,4 +1,4 @@
-/// <reference path="../../../../../../node_modules/@types/gapi/index.d.ts" />
+import "../../../../../../node_modules/@types/gapi/index.d.ts"
 
 import { Component, OnInit } from '@angular/core';
 declare const gapi: any;
@@ -9,11 +9,10 @@ declare const gapi: any;
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {console.log("User componnet init")}
 
-  onSignIn(googleUser: any): void {
+  onSignIn2(googleUser: any): void {
     const profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
@@ -21,12 +20,12 @@ export class UserComponent implements OnInit {
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   }
 
-  signOut(): void {
-    let auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(() => {
-      console.log('User signed out.');
-    });
+  onSignIn(googleUser: any): void {
+    const profile = googleUser.getBasicProfile();
+    const id_token = googleUser.getAuthResponse().id_token;
+    console.log("id_token: " + id_token);
   }
+
 
   handleCredentialResponse(response: any): void{
     console.log("handle credential response" + response.credential)
