@@ -1,25 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
 @font-face {
     font-family: 'Copperplate';
-    src: url("../assets/fonts/copperplate/OPTICopperplate.otf")
+    src: url("../assets/fonts/copperplate/OPTICopperplate-Light.otf")
 }
-
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
-    src: url('../assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
-    src: url('../assets/fonts/Montserrat/static/Montserrat-Bold.ttf');
-    font-weight: 600;
-    font-style: normal;
-}
-
 
 $font-family-sans-serif-headers: 'Copperplate', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-family-sans-serif-body: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -29,7 +13,7 @@ $display-font-family: $font-family-sans-serif-body;
 
 body {
     font-family: 'Montserrat' !important;
-    background-color: black;
+    font-weight: light;
 }
 
 ul {
@@ -39,25 +23,29 @@ ul {
 .sd-color-white {
     color: white;
 }
+.sd-color-black {
+    color: black;
+}
 
 .sd-color-secondary {
     color: $secondary;
 }
 
-.sd-bg-black {
-    background-color: black;
-    font-weight: 100
+.sd-bg-dark-grey {
+    background-color: $dark-grey;
+}
+.sd-bg-white {
+    background-color: white;
 }
 
 .sd-btn {
     @extend .btn;
     padding-top: 8px;
     padding-bottom: 8px;
-    border-radius: 15px;
+    border-radius: 6px;
     padding-left: 25px;
     padding-right: 25px;
     font-size: $font-size-sm;
-    font-weight: $font-weight-semibold;
 }
 
 .sd-btn-primary {
@@ -110,7 +98,7 @@ h6 {
     @extend .input-group-text;
     background-color: white;
     border: white;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 .sd-form-control.search-bar:focus {
@@ -122,14 +110,27 @@ h6 {
 .fs-sm {
     font-size: $font-size-sm;
 }
-
 .fs-xs {
     font-size: $font-size-xs;
 }
+
 .fw-bold{
     font-weight: $font-weight-semibold !important;
 }
-
+.fw-light{
+    font-weight: $font-weight-light !important;
+}
 .overflow-hidden {
     overflow: hidden;
+}
+
+.overflow-wrap{
+    overflow-wrap: normal;
+}
+.overflow-scroll{
+    overflow: scroll;
+}
+
+.letter-spacing-lg{
+    letter-spacing: 2px;
 }
