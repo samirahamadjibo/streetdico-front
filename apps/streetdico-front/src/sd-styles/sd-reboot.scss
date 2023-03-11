@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Copperplate';
+    src: url("../assets/fonts/copperplate/OPTICopperplate.otf")
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+    src: url('../assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+    src: url('../assets/fonts/Montserrat/static/Montserrat-Bold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+$font-family-sans-serif-headers: 'Copperplate', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif-body: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$headings-font-family: $font-family-sans-serif-headers;
+$display-font-family: $font-family-sans-serif-body;
+
+body {
+    font-family: 'Montserrat' !important;
+    background-color: black;
+}
+
+ul {
+    list-style-type: none
+}
+
+.sd-color-white {
+    color: white;
+}
+
+.sd-color-secondary {
+    color: $secondary;
+}
+
+.sd-bg-black {
+    background-color: black;
+    font-weight: 100
+}
+
+.sd-btn {
+    @extend .btn;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+}
+
+.sd-btn-primary {
+    @extend .btn-primary;
+    @extend .sd-btn;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.sd-btn-outline {
+    @extend .btn-outline-primary;
+    @extend .sd-btn;
+    border-color: white;
+    color: white;
+}
+
+.sd-btn-link {
+    @extend .btn-link;
+}
+
+.sd-btn-underline {
+    @extend .btn;
+    @extend .sd-btn-link;
+    border-radius: 0px;
+    font-size: $font-size-sm;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+.sd-btn-underline:hover {
+    border-bottom-color: $primary;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Copperplate';
+}
+
+::placeholder {
+    font-size: $font-size-sm;
+}
+
+.sd-input-group-text {
+    @extend .input-group-text;
+    background-color: white;
+    border: white;
+    border-radius: 10px;
+}
+
+.sd-form-control.search-bar:focus {
+    box-shadow: inset -30px 0px 22px -16px #5045e269;
+}
+
+
+// additional bootstrap styles
+.fs-sm {
+    font-size: $font-size-sm;
+}
+
+.fs-xs {
+    font-size: $font-size-xs;
+}
+.fw-bold{
+    font-weight: $font-weight-semibold !important;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
