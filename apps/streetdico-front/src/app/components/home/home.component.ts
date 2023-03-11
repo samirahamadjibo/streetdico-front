@@ -10,13 +10,13 @@ import { WordService } from '../../services/word/word.service';
 export class HomeComponent implements OnInit {
   constructor(private wordService: WordService) {}
 
-  words: Word[] = [];
+  trendingWords: Word[] = [];
 
-  getAllWords(): void{
-    this.wordService.getWords().subscribe(words => this.words = words);;
+  getTrendingWords(): void{
+    this.wordService.getTrendingWords().subscribe((words: Word[]) => {this.trendingWords = words});;
   }
 
   ngOnInit(): void {
-    this.getAllWords();
+    this.getTrendingWords();
   }
 }

@@ -1,3 +1,22 @@
 <digitalvitae-header-home></digitalvitae-header-home>
-<div style="height: 600px; background-color: white;"></div>
+<div class="container sd-color-black py-5">
+    <div class="row d-flex justify-content-center pb-3">
+        <div class="col-12">
+            <div class="sd-title">A la une</div>
+            <div class="sd-undertitle">La/les définition(s) en tendance</div>
+        </div>
+    </div>
+
+    <div class="row py-5">
+        <div class="col-12 py-5 px-3 d-flex overflow-scroll ">
+            <div *ngFor="let word of trendingWords">
+                <div class="word">
+                    <div class="title pb-3">{{word.name}}</div>
+                    <div class="definition">{{word.definition}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <digitalvitae-footer></digitalvitae-footer>

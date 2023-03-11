@@ -29,3 +29,12 @@
     border-bottom-right-radius: 8px !important;
     font-size: $font-size-sm;
 }
+
+.sd-title{
+    @extend .fs-2;
+    font-weight: bold;
+}
+
+.sd-undertitle{
+    font-size: $font-size-sm;
+}
