@@ -1,5 +1,3 @@
-import "../../../../../../node_modules/@types/gapi/index.d.ts"
-
 import { Component, OnInit } from '@angular/core';
 
 @Component({
