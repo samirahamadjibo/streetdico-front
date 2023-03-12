@@ -10,7 +10,6 @@ import { HeaderHomeComponent } from './components/shared/core/header-home/header
 import { FooterComponent } from './components/shared/core/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserComponent } from './components/user/user.component';
-import { RouterOutlet } from '@angular/router';
 
 
 @NgModule({
@@ -21,7 +20,6 @@ import { RouterOutlet } from '@angular/router';
     HeaderHomeComponent,
     FooterComponent,
     UserComponent,
-    RouterOutlet,
   ],
   imports: [BrowserModule, HttpClientModule, MatIconModule, AppRoutingModule],
   providers: [],
