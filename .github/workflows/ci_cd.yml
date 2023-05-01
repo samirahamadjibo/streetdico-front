@@ -54,5 +54,5 @@ jobs:
             
         - name: Copy files to the test website with the AWS CLI
           run:  |
-            aws s3 sync ./dist/streetdico-front-dev/ s3://streetdico-front-dev
+            aws s3 sync /home/runner/work/streetdico-front/streetdico-front/dist/streetdico-front-dev/ s3://streetdico-front-dev
           
