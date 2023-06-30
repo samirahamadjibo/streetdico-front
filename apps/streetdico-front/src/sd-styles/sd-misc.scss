@@ -1,0 +1,25 @@
+.sd-form-control.search-bar{
+    @extend .form-control;
+    line-height: 2.2;
+    border: white;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+.sd-form-control.footer-search-bar{
+    @extend .sd-form-control, .search-bar;
+    line-height: 1.8;
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    font-size: $font-size-sm;
+}
+
+.sd-title{
+    @extend .fs-6;
+    @extend .ff-title;
+    @extend .fw-extra-bold;
+}
+
+.sd-undertitle{
+    font-size: $font-size-sm;
+}
+

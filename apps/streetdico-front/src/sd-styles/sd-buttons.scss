@@ -1,0 +1,50 @@
+.sd-btn {
+    @extend .btn;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 6px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: $font-size-sm;
+}
+
+.sd-btn-primary {
+    @extend .btn-primary;
+    @extend .sd-btn;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.sd-btn-outline {
+    @extend .btn-outline-primary;
+    @extend .sd-btn;
+    border-color: white;
+    color: white;
+}
+
+.sd-btn-link {
+    @extend .btn-link;
+}
+.sd-btn-link-secondary {
+    @extend .btn-link;
+    & :hover{
+        color: $secondary
+    }
+}
+.hover-secondary:hover{
+    color: $secondary
+}
+
+.sd-btn-underline {
+    @extend .btn;
+    @extend .sd-btn-link;
+    border-radius: 0px;
+    font-size: $font-size-sm;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+.sd-btn-underline:hover {
+    border-bottom-color: $primary;
+}
