@@ -24,11 +24,7 @@
     "@types/gapi": "^0.0.42",
     "@types/gapi.auth2": "^0.0.56",
     "bootstrap": "^5.2.1",
-<<<<<<< HEAD
-    "bootstrap-icons": "^1.9.1",
-=======
     "bootstrap-icons": "^1.10.5",
->>>>>>> 584c3c5 (fixed frontend)
     "googleapis": "^107.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

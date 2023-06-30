@@ -13,13 +13,9 @@ $display-font-family: $font-family-sans-serif-body;
 
 body {
     font-family: 'Montserrat' !important;
-<<<<<<< HEAD
-    font-weight: light;
-=======
     font-weight: $font-weight-light;
     background-color: $dark-grey;
     color: $dark-grey
->>>>>>> 584c3c5 (fixed frontend)
 }
 
 ul {
@@ -29,13 +25,8 @@ ul {
 .sd-color-white {
     color: white;
 }
-<<<<<<< HEAD
-.sd-color-black {
-    color: black;
-=======
 .sd-color-black-grey {
     color: $dark-grey
->>>>>>> 584c3c5 (fixed frontend)
 }
 
 .sd-color-secondary {
@@ -49,65 +40,12 @@ ul {
     background-color: white;
 }
 
-<<<<<<< HEAD
-.sd-btn {
-    @extend .btn;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 6px;
-    padding-left: 25px;
-    padding-right: 25px;
-    font-size: $font-size-sm;
-}
-
-.sd-btn-primary {
-    @extend .btn-primary;
-    @extend .sd-btn;
-    background-color: $primary;
-    border-color: $primary;
-}
-
-.sd-btn-outline {
-    @extend .btn-outline-primary;
-    @extend .sd-btn;
-    border-color: white;
-    color: white;
-}
-
-.sd-btn-link {
-    @extend .btn-link;
-}
-
-.sd-btn-underline {
-    @extend .btn;
-    @extend .sd-btn-link;
-    border-radius: 0px;
-    font-size: $font-size-sm;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid white;
-}
-
-.sd-btn-underline:hover {
-    border-bottom-color: $primary;
-}
-
-
-=======
->>>>>>> 584c3c5 (fixed frontend)
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-<<<<<<< HEAD
-    font-family: 'Copperplate';
-}
-
-::placeholder {
-    font-size: $font-size-sm;
-=======
     @extend .ff-title
 }
 
@@ -117,27 +55,18 @@ h6 {
 ::placeholder {
     font-size: $font-size-sm;
     font-weight: $font-weight-light
->>>>>>> 584c3c5 (fixed frontend)
 }
 
 .sd-input-group-text {
     @extend .input-group-text;
     background-color: white;
     border: white;
-<<<<<<< HEAD
-    border-radius: 6px;
-}
-
-.sd-form-control.search-bar:focus {
-    box-shadow: inset -30px 0px 22px -16px #5045e269;
-=======
 }
 
 .sd-form-control.search-bar:focus {
     -webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
->>>>>>> 584c3c5 (fixed frontend)
 }
 
 
@@ -145,26 +74,16 @@ h6 {
 .fs-sm {
     font-size: $font-size-sm;
 }
-<<<<<<< HEAD
-=======
 .fs-lg {
     font-size: $font-size-lg;
 }
 .fs-xl {
     font-size: $font-size-xl;
 }
->>>>>>> 584c3c5 (fixed frontend)
 .fs-xs {
     font-size: $font-size-xs;
 }
 
-<<<<<<< HEAD
-.fw-bold{
-    font-weight: $font-weight-semibold !important;
-}
-.fw-light{
-    font-weight: $font-weight-light !important;
-=======
 .fw-extra-bold{
     font-weight: $font-weight-bolder;
 }
@@ -173,7 +92,6 @@ h6 {
 }
 .fw-light{
     font-weight: $font-weight-light;
->>>>>>> 584c3c5 (fixed frontend)
 }
 .overflow-hidden {
     overflow: hidden;
