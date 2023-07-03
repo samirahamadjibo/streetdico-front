@@ -9,7 +9,7 @@ import { HeaderSimpleComponent } from './components/shared/core/header-simple/he
 import { HeaderHomeComponent } from './components/shared/core/header-home/header-home.component';
 import { FooterComponent } from './components/shared/core/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { UserComponent } from './components/user/user.component';
+import { AuthComponent } from './components/auth/auth.component';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { UserComponent } from './components/user/user.component';
     HeaderSimpleComponent,
     HeaderHomeComponent,
     FooterComponent,
-    UserComponent,
+    AuthComponent
   ],
   imports: [BrowserModule, HttpClientModule, MatIconModule, AppRoutingModule],
   providers: [],
