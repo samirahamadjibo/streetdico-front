@@ -13,11 +13,20 @@
     right: -84px !important;
     bottom: -90px !important;
 }
+.auth-stripes {
+    left: 0px !important;
+    bottom: -245px !important;
+    @media(min-width: map-get($map: $grid-breakpoints, $key: xl)){
+        left: 200px !important;
+    };
+    z-index: 1;
+}
 
 .auth-section-container{
     height: 100vh;
 }
 .auth-section{
+    z-index: 0;
     @media(max-width: map-get($map: $grid-breakpoints, $key: sm)){height: 90vh;};
 }
 

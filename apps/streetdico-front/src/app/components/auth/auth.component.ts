@@ -14,7 +14,7 @@ export class AuthComponent implements OnInit {
   wordInProgress: Word = {} as Word
 
   getTrendingWords(): void{
-    //this.wordInProgress = this.wordService.getWordInProgress();
+    this.wordInProgress = this.wordService.getWordInProgress();
   }
 
   isObjectEmpty(obj: object): boolean {
