@@ -11,10 +11,14 @@ export class AuthComponent implements OnInit {
 
   constructor(private wordService: WordService) {}
 
-  wordInProgress: Word = {} as Word;
+  wordInProgress: Word = {} as Word
 
   getTrendingWords(): void{
-    this.wordInProgress = this.wordService.getWordInProgress();
+    //this.wordInProgress = this.wordService.getWordInProgress();
+  }
+
+  isObjectEmpty(obj: object): boolean {
+    return Object.keys(obj).length === 0;
   }
 
   ngOnInit(): void {
