@@ -1,9 +1,34 @@
 <div class="container-fluid">
     <div class="row auth-section-container">
-        <div class="col-12 col-md-1 secondary-banner">
+        <div class="col-12 col-md-1 secondary-banner d-flex pt-md-5 ps-4 ps-md-0 justify-content-md-center align-items-center align-items-md-start">
+            <div>
+                <img src="../../../assets/images/logo-primary.png" class="secondary-banner-logo" alt="logo">
+            </div>
         </div>
         <div class="col-12 col-md-11 auth-section sd-bg-white">
+            <div class="row vh-100 align-items-center justify-content-center">
+                <div class="col-11 col-sm-8 col-md-5 d-flex flex-column justify-content-center">
+                    <div class="fs-3 mb-1 fw-bold">Connecte toi ou <br>Inscrit toi</div>
+                    <div class="sd-undertitle mb-5">pour valider ta contribution</div>
 
+                    <div class="col-12">
+                        <div id="g_id_onload" data-client_id="94361866527-b5mkconagm1apij1eak0881mhjai416c.apps.googleusercontent.com"
+                            data-login_uri="http://localhost:8080/api/v1/users/user"
+                            data-auto_prompt="false">
+                        </div>
+                        <div class="g_id_signin overflow-hidden" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with"
+                            data-shape="rectangular" data-logo_alignment="left">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-0 col-md-3 d-flex d-none d-md-block flex-column justify-content-center border-start ps-5">
+                    <div class="fs-6 mb-4">Prévisualisation de ta <br>contribution</div>
+                    <div class="word-sm">
+                        <div class="name sd-underline-secondary">{{wordInProgress.name}}</div>
+                        <div class="definition">{{wordInProgress.definition}}</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

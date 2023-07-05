@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WordService } from '../../services/word/word.service';
+import { Word } from '../../models/word';
 
 @Component({
   selector: 'digitalvitae-user',
@@ -7,5 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  ngOnInit(): void {console.log("User componnet init")}
+  constructor(private wordService: WordService) {}
+
+  wordInProgress: Word = {} as Word;
+
+  getTrendingWords(): void{
+    this.wordInProgress = this.wordService.getWordInProgress();
+  }
+
+  ngOnInit(): void {
+    this.getTrendingWords();
+  }
 }

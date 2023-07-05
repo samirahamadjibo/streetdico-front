@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   trendingWords: Word[] = [];
 
   getTrendingWords(): void{
-    this.wordService.getTrendingWords().subscribe((words: Word[]) => {this.trendingWords = words});;
+    this.wordService.getAllWords().subscribe((words: Word[]) => {this.trendingWords = words});;
   }
 
   ngOnInit(): void {

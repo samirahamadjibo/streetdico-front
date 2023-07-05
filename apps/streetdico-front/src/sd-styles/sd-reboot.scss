@@ -114,3 +114,11 @@ h6 {
 .vw-100{
     width: 100vh;
 }
+
+.border-end{
+    border-right: 1px $gray-300 solid;
+}
+
+.border-start{
+    border-left: 1px $gray-300 solid;
+}

@@ -1,16 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Word } from '../../models/word';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WordService {
+  constructor(private http: HttpClient) {}
+  private allWordsUrl = 'http://localhost:8080/api/v1/words';
 
-  constructor(private http: HttpClient) { }
-  private wordUrl = "http://localhost:8080/api/v1/words/trending"
+  getAllWords() {
+    return this.http.get<Word[]>(this.allWordsUrl);
+  }
 
-  getTrendingWords() {
-    return this.http.get<Word[]>(this.wordUrl);
+  getWordInProgress() {
+    return {
+      id: -1,
+      name: 'Samira',
+      definition:
+        "créatrice du dictionnaire urbain. Exemple: Aujourd'hui je suis allée à la teuf de Roland, c'était hyper chouette. Je le referai surement et cela dans une meilleure vie",
+    };
   }
 }

@@ -8,6 +8,14 @@
     border-radius: 10px;
 }
 
+.word-sm{
+    @extend .word;
+    width: 200px;
+    height: 280px;
+    padding: 20px 26px;
+    font-size: $font-size-sm;
+}
+
 .sd-underline {
     border-bottom: 4px solid black;
     width: 50%

@@ -27,3 +27,7 @@
     background-color: $dark-grey;
     @media(max-width: map-get($map: $grid-breakpoints, $key: md)){height: 10vh;};
 }
+
+.secondary-banner-logo{
+    width: 35px;
+}
