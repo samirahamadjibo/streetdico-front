@@ -13,3 +13,11 @@
     right: -84px !important;
     bottom: -90px !important;
 }
+
+.auth-section-container{
+    height: 100vh;
+}
+.auth-section{
+    @media(max-width: map-get($map: $grid-breakpoints, $key: md)){height: 90vh;};
+}
+
