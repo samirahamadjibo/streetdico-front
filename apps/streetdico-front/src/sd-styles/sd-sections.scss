@@ -30,3 +30,6 @@
     @media(max-width: map-get($map: $grid-breakpoints, $key: sm)){height: 90vh;};
 }
 
+.section-header{
+    background-color: $dark-grey;
+}

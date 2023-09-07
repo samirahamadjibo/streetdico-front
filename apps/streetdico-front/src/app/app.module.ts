@@ -10,7 +10,7 @@ import { HeaderHomeComponent } from './components/shared/core/header-home/header
 import { FooterComponent } from './components/shared/core/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthComponent } from './components/auth/auth.component';
-
+import { AccountComponent } from './components/account/account.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { AuthComponent } from './components/auth/auth.component';
     HeaderSimpleComponent,
     HeaderHomeComponent,
     FooterComponent,
-    AuthComponent
+    AuthComponent,
+    AccountComponent,
   ],
   imports: [BrowserModule, HttpClientModule, MatIconModule, AppRoutingModule],
   providers: [],

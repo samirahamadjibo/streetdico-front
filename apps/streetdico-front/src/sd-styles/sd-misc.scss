@@ -1,7 +1,6 @@
 .sd-form-control.search-bar{
     @extend .form-control;
     line-height: 2.2;
-    border: white;
     border-top-right-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
 }
@@ -11,6 +10,17 @@
     border-top-right-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
     font-size: $font-size-sm;
+}
+.sd-form-control.home-search-bar{
+    @extend .sd-form-control, .search-bar;
+    border: white;
+}
+.sd-form-control.small-search-bar{
+    @extend .sd-form-control, .search-bar;
+    line-height: 1.8;
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    background-color: $gray-200
 }
 
 .sd-title{
@@ -31,4 +41,12 @@
 
 .secondary-banner-logo{
     width: 30px;
+}
+
+.horizontal-separator{
+    border-top: 1px $gray-300 solid ;
+} 
+
+.display-height{
+    height: 80vh;
 }

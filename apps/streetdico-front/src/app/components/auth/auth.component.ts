@@ -13,7 +13,7 @@ export class AuthComponent implements OnInit {
 
   wordInProgress: Word = {} as Word
 
-  getTrendingWords(): void{
+  getWordInProgress(): void{
     this.wordInProgress = this.wordService.getWordInProgress();
   }
 
@@ -22,6 +22,6 @@ export class AuthComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getTrendingWords();
+    this.getWordInProgress();
   }
 }

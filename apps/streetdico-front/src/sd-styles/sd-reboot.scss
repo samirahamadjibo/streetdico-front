@@ -59,6 +59,9 @@ h6 {
 
 .sd-input-group-text {
     @extend .input-group-text;
+}
+
+.sd-input-group-text.form {
     background-color: white;
     border: white;
 }

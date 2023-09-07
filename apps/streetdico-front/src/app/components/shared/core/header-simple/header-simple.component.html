@@ -1,15 +1,15 @@
 <div class="container-fluid sd-bg-dark-grey sd-color-white border-dark-grey">
     <header class="row d-flex align-items-center py-5">
         <div
-            class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start align-items-center ps-md-5 mb-3 mb-md-0">
+            class="col-4 col-md-6 d-flex justify-content-center justify-content-md-start align-items-center ps-md-5">
             <a href="/" class="text-decoration-none">
                 <img src="../../../../../assets/images/logo-primary.png" alt="logo" class="header-logo">
             </a>
-            <h5 class="px-3 mb-0 ms-2 letter-spacing-lg fw-light">LE DICTIONNAIRE URBAIN</h5>
+            <h5 class="px-3 mb-0 ms-2 letter-spacing-lg fw-light d-none d-md-block">LE DICTIONNAIRE URBAIN</h5>
         </div>
         <ul
-            class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end align-items-center mb-0 mt-4 mt-md-0 pe-md-5">
-            <li class="d-flex align-items-center"><a href="#" class="mx-3 sd-btn-outline d-none d-md-block">se connecter | s'inscrire</a>
+            class="col-8 col-md-6 d-flex justify-content-center justify-content-md-end align-items-center mb-0 pe-md-5">
+            <li class="d-flex align-items-center"><a  [routerLink]="['/auth']" class="mx-3 sd-btn-secondary">se connecter | s'inscrire</a>
             </li>
         </ul>
     </header>
