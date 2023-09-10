@@ -3,6 +3,7 @@
     line-height: 2.2;
     border-top-right-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
+    border: white;
 }
 .sd-form-control.footer-search-bar{
     @extend .sd-form-control, .search-bar;
@@ -13,7 +14,6 @@
 }
 .sd-form-control.home-search-bar{
     @extend .sd-form-control, .search-bar;
-    border: white;
 }
 .sd-form-control.small-search-bar{
     @extend .sd-form-control, .search-bar;

@@ -29,15 +29,15 @@
 
 .sd-btn-link {
     @extend .btn-link;
+    text-decoration: none;
 }
+
 .sd-btn-link-secondary {
-    @extend .btn-link;
-    & :hover{
-        color: $secondary
-    }
+    @extend .sd-btn-link;
 }
-.hover-secondary:hover{
-    color: $secondary
+.sd-btn-link-secondary:hover{
+    color: $secondary;
+    cursor: pointer;
 }
 
 .sd-btn-underline {

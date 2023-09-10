@@ -59,12 +59,9 @@ h6 {
 
 .sd-input-group-text {
     @extend .input-group-text;
-}
-
-.sd-input-group-text.form {
-    background-color: white;
-    border: white;
-}
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
+}   
 
 .sd-form-control.search-bar:focus {
     -webkit-box-shadow: none;
