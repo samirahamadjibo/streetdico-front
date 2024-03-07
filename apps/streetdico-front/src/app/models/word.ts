@@ -3,7 +3,7 @@ export interface Word {
     name: string;
     definition: string;
     example: string;
-    tags: string;
+    tags: [];
     flagsCount: number;
     likesCount: number;
     dislikesCount: number;

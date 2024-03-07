@@ -32,7 +32,6 @@
 }
 
 .word .name{
-    font-weight: bold;
     margin-bottom: 15px;
 }
 
@@ -42,4 +41,16 @@
 .word .example{
     font-size: $font-size-sm;
     font-style: italic;
+}
+.word .published-by{
+    font-size: $font-size-sm;
+    font-weight: bold;
+}
+
+.word .likes-dislikes{
+    font-size: $font-size-sm;
+}
+
+.word .tags{
+    font-size: $font-size-sm;
 }
