@@ -18,8 +18,6 @@ export class HomeComponent implements OnInit {
       this.trendingWords.forEach((word: any) => {
           word.tags = word.tags.split(', ')
       });
-
-      console.log(this.trendingWords)
     });    
   }
 
