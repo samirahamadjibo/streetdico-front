@@ -15,12 +15,22 @@
 .sd-form-control.home-search-bar{
     @extend .sd-form-control, .search-bar;
 }
+
+.sd-input-group-text.home-search-bar-2{
+    border: 1px solid black
+}
+
+.sd-form-control.home-search-bar-2{
+    @extend .sd-form-control, .search-bar;
+    border: 1px solid black
+}
 .sd-form-control.small-search-bar{
     @extend .sd-form-control, .search-bar;
     line-height: 1.8;
     border-top-right-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
-    background-color: $gray-200
+    background-color: $gray-200;
+    border: 1px solid black
 }
 
 .sd-title{

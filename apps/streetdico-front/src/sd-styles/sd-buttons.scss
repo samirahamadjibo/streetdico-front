@@ -46,6 +46,15 @@
     cursor: pointer;
 }
 
+.sd-btn-link-primary {
+    @extend .sd-btn-link;
+}
+.sd-btn-link-primary:hover{
+    color: $primary;
+    cursor: pointer;
+}
+
+
 .sd-btn-underline {
     @extend .btn;
     @extend .sd-btn-link;
