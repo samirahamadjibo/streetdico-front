@@ -14,7 +14,7 @@ $display-font-family: $font-family-sans-serif-body;
 body {
     font-family: 'Montserrat' !important;
     font-weight: $font-weight-light;
-    background-color: $dark-grey;
+    background-color: white;
     color: $dark-grey
 }
 
@@ -25,6 +25,7 @@ ul {
 .sd-color-white {
     color: white;
 }
+
 .sd-color-black-grey {
     color: $dark-grey
 }
@@ -35,12 +36,15 @@ ul {
 .sd-color-primary {
     color: $primary;
 }
-
+.sd-bg-light-grey{
+    background-color: $light-grey ;
+}
 .sd-bg-dark-grey {
     background-color: $dark-grey;
 }
 .sd-bg-white {
     background-color: white;
+    border-color: white;
 }
 
 h1,
@@ -53,8 +57,13 @@ h6 {
 }
 
 .ff-title{
-    font-family: 'Copperplate';
+    font-family: $headings-font-family;
 }
+
+.ff-body{
+    font-family: $display-font-family;
+}
+
 ::placeholder {
     font-size: $font-size-sm;
     font-weight: $font-weight-light

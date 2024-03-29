@@ -27,6 +27,12 @@
     color: white;
 }
 
+.sd-btn-outline-dark{
+    @extend .sd-btn-outline;
+    border-color: black;
+    color: black
+}
+
 .sd-btn-link {
     @extend .btn-link;
     text-decoration: none;

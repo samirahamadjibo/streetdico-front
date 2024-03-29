@@ -1,4 +1,4 @@
-.sd-form-control.search-bar{
+.sd-form-control.search-bar, .home-page-form-word{
     @extend .form-control;
     line-height: 2.2;
     border-top-right-radius: 10px !important;
@@ -31,6 +31,10 @@
 
 .sd-undertitle{
     font-size: $font-size-sm;
+}
+
+.home-page-form-word{
+    border: 1px black solid;
 }
 
 .secondary-banner{

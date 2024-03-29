@@ -1,13 +1,13 @@
 <digitalvitae-header-home></digitalvitae-header-home>
-<div class="container-fluid sd-bg-white ps-4 ps-md-2 py-5">
+<div class="container-fluid sd-bg-white ps-4 ps-md-2 pt-5">
     <div class="row d-flex justify-content-center pb-3">
         <div class="col-11">
-            <h4 class="mb-1 fw-bold mb-2">LES MOTS TENDANCE</h4>
+            <h3 class="mb-1 fw-bold mb-2">LES MOTS TENDANCE</h3>
             <div class="sd-undertitle">La/les définition(s) en tendance</div>
         </div>
     </div>
 
-    <div class="row justify-content-center pb-5">
+    <div class="row justify-content-center pb-4">
         <div class="col-11 py-5 px-3 d-flex flex-wrap mb-5 justify-content-start">
             <div *ngFor="let word of trendingWords">
                 <div class="word">
@@ -35,6 +35,40 @@
             <div class="d-flex justify-content-center align-items-center"> 
                 <div class="sd-btn-primary word-size">Voir tout</div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Rajout d'un mot -->
+<div class="container-fluid pb-5 sd-bg-white">
+    <div class="row d-flex justify-content-center pb-3">
+        <div class="col-11">
+            <h3 class="mb-1 fw-bold mb-2">A TOI DE JOUER !</h3>
+            <div class="sd-undertitle">Rajoute tes définitons !</div>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-3 pb-5 sd-bg-white">
+    <div class="row d-flex justify-content-center sd-bg-light-grey home-page-form-container pt-5">
+        <h5 class="pb-3 ff-body">Rajoute tes définitions et rentre dans l'histoire !</h5>
+        <div class="d-flex">
+            <div class="sd-btn-outline-dark d-none d-md-block">Gérer mes mots</div>
+        </div>
+        <div class="col-11 col-md-8">
+            <form>
+                <div class="my-4">
+                    <label for="homePageFormWord" class="form-label pb-2 fs-sm">Ton mot</label>
+                    <input type="text" class="sd-form-control home-page-form-word" id="homePageFormWord"
+                        placeholder="Bicrave..">
+                </div>
+                <div class="my-4">
+                    <label for="homePageFormDefinition" class="form-label pb-2 fs-sm">Ta définition</label>
+                    <textarea class="sd-form-control home-page-form-word" id="homePageFormDefinition" rows="3"
+                        placeholder="Fumer ..."></textarea>
+                </div>
+            </form>
         </div>
     </div>
 </div>
