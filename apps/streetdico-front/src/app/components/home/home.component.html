@@ -7,8 +7,8 @@
         </div>
     </div>
 
-    <div class="row justify-content-center pb-4">
-        <div class="col-11 py-5 px-3 d-flex flex-wrap mb-5 justify-content-start">
+    <div class="row justify-content-center pb-2">
+        <div class="col-11 pt-5 px-3 d-flex flex-wrap mb-3 justify-content-start">
             <div *ngFor="let word of trendingWords">
                 <div class="word">
                     <div> <h5 class="name sd-underline-secondary">{{word.name}}</h5> </div>
@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-center align-items-center"> 
+            <div class="d-flex w-100 justify-content-center align-items-center"> 
                 <div class="sd-btn-primary word-size">Voir tout</div>
             </div>
         </div>
@@ -41,8 +41,8 @@
 
 
 <!-- Rajout d'un mot -->
-<div class="container-fluid pb-5 sd-bg-white">
-    <div class="row justify-content-center pb-3">
+<div class="container-fluid pb-2 sd-bg-white">
+    <div class="row justify-content-center pb-1">
         <div class="col-11 d-flex flex-column justify-content-center align-items-center">
             <h3 class="mb-1 fw-bold mb-2">A TOI DE JOUER !</h3>
             <div class="sd-undertitle">Rajoute tes définitons !</div>
@@ -60,18 +60,18 @@
             </div>
 
             <div class="row">
-                <div class="col-5 d-none d-md-flex flex-column justify-content-center pe-md-4">
+                <div class="col-5 d-none d-md-flex flex-column justify-content-center pe-md-5">
                     <div class="pb-5">
                         <span><i class="bi bi-check-circle-fill sd-color-primary fs-xl me-3"></i></span>
-                        <span class="fs-lg">Rentres dans le mouvement du moment</span>
+                        <span class="">Rentres dans le mouvement du moment</span>
                     </div>
                     <div class="pb-5">
                         <span><i class="bi bi-check-circle-fill sd-color-primary fs-xl me-3"></i></span>
-                        <span class="fs-lg">Recois un badge pour les definitions rajoutées</span>
+                        <span class="">Recois un badge pour les definitions rajoutées</span>
                     </div>
                     <div class="pb-5">
                         <span><i class="bi bi-check-circle-fill sd-color-primary fs-xl me-3"></i></span>
-                        <span class="fs-lg">Partage tes réalisations sur les réseaux sociaux</span>
+                        <span class="">Partage tes réalisations sur les réseaux sociaux</span>
                     </div>
                 </div>
                 <div class="col-12 col-md-7">
@@ -92,6 +92,36 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Rajout d'un mot -->
+<div class="container-fluid pb-5 sd-bg-white pt-5">
+    <div class="row justify-content-center pb-3">
+        <div class="col-11 d-flex flex-column justify-content-center align-items-center">
+            <h3 class="mb-1 fw-bold mb-2">TOUJOURS EN TRAIN DE SCROLLER ?</h3>
+            <div class="sd-undertitle">Rajoute tes définitons !</div>
+        </div>
+    </div>
+
+    <div class="row mb-5 justify-content-center">
+        <div class="col-11 col-md-7 col-xl-7 ms-4 ms-md-5">
+            <form>
+                <div class="my-4">
+                    <label for="homeSearchBar2" class="form-label pb-2"> <span class="fs-sm">Recherche un mot</span></label>
+                    <div class="input-group">
+                        <span class="sd-input-group-text home-search-bar-2"><i class="bi bi-search"></i></span>
+                        <input type="text" class="sd-form-control search-bar home-search-bar-2" id="homeSearchBar2" placeholder="Oui, c'est ici ..">
+                        <div class="d-flex align-items-center ms-3">
+                            <div class="sd-btn-link-primary fs-sm">rechercher
+                                <i class="bi bi-chevron-double-right ms-2 "></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
