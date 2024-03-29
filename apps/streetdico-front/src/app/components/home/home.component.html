@@ -42,33 +42,56 @@
 
 <!-- Rajout d'un mot -->
 <div class="container-fluid pb-5 sd-bg-white">
-    <div class="row d-flex justify-content-center pb-3">
-        <div class="col-11">
+    <div class="row justify-content-center pb-3">
+        <div class="col-11 d-flex flex-column justify-content-center align-items-center">
             <h3 class="mb-1 fw-bold mb-2">A TOI DE JOUER !</h3>
             <div class="sd-undertitle">Rajoute tes définitons !</div>
         </div>
     </div>
 </div>
 
-<div class="container pt-3 pb-5 sd-bg-white">
-    <div class="row d-flex justify-content-center sd-bg-light-grey home-page-form-container pt-5">
-        <h5 class="pb-3 ff-body">Rajoute tes définitions et rentre dans l'histoire !</h5>
-        <div class="d-flex">
-            <div class="sd-btn-outline-dark d-none d-md-block">Gérer mes mots</div>
-        </div>
-        <div class="col-11 col-md-8">
-            <form>
-                <div class="my-4">
-                    <label for="homePageFormWord" class="form-label pb-2 fs-sm">Ton mot</label>
-                    <input type="text" class="sd-form-control home-page-form-word" id="homePageFormWord"
-                        placeholder="Bicrave..">
+<div class="container-fluid pt-3 pb-5 sd-bg-white">
+    <div class="row d-flex justify-content-center">
+ 
+        <div class="col-11 sd-bg-light-grey home-page-form-container col-md-8">
+            <h5 class="pb-3 ff-body">Rajoute tes définitions et rentre dans l'histoire !</h5>
+            <div class="d-flex pb-5">
+                <div class="sd-btn-outline-dark d-none d-md-block">Gérer mes mots</div>
+            </div>
+
+            <div class="row">
+                <div class="col-5 d-none d-md-flex flex-column justify-content-center pe-md-4">
+                    <div class="pb-5">
+                        <span><i class="bi bi-check-circle-fill sd-color-primary fs-xl me-3"></i></span>
+                        <span class="fs-lg">Rentres dans le mouvement du moment</span>
+                    </div>
+                    <div class="pb-5">
+                        <span><i class="bi bi-check-circle-fill sd-color-primary fs-xl me-3"></i></span>
+                        <span class="fs-lg">Recois un badge pour les definitions rajoutées</span>
+                    </div>
+                    <div class="pb-5">
+                        <span><i class="bi bi-check-circle-fill sd-color-primary fs-xl me-3"></i></span>
+                        <span class="fs-lg">Partage tes réalisations sur les réseaux sociaux</span>
+                    </div>
                 </div>
-                <div class="my-4">
-                    <label for="homePageFormDefinition" class="form-label pb-2 fs-sm">Ta définition</label>
-                    <textarea class="sd-form-control home-page-form-word" id="homePageFormDefinition" rows="3"
-                        placeholder="Fumer ..."></textarea>
+                <div class="col-12 col-md-7">
+                    <form>
+                        <div class="my-4">
+                            <label for="homePageFormWord" class="form-label pb-2 fs-sm">Ton mot</label>
+                            <input type="text" class="sd-form-control home-page-form-word" id="homePageFormWord"
+                                placeholder="Bicrave..">
+                        </div>
+                        <div class="my-4">
+                            <label for="homePageFormDefinition" class="form-label pb-2 fs-sm">Ta définition</label>
+                            <textarea class="sd-form-control home-page-form-word" id="homePageFormDefinition" rows="3"
+                                placeholder="Fumer ..."></textarea>
+                        </div>
+                        <div class="d-flex py-3">
+                            <div class="sd-btn-primary d-none d-md-block">Continuer | Se connecter</div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
