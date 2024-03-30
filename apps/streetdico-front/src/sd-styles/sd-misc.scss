@@ -64,3 +64,25 @@
 .display-height{
     height: 80vh;
 }
+
+.home-publisher-row{
+    white-space: nowrap;
+    animation: scrolling-tags 18s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-publisher-container{
+    background-color: $light-grey;
+}
+
+@keyframes scrolling-tags {
+    0%{
+      transform: translate(-100%, 0);
+    }
+    100%{
+      transform: translate(0,0);
+    }
+  }
+

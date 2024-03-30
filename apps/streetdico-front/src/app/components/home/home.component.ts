@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   constructor(private wordService: WordService) {}
 
   trendingWords: Word[] = [];
+  publishersRow1 = ["samira", "piggysam", "poulet-payant", "rafaella", "tourniquet", "etoile-de-mer", "routine", "coupe-carree", "alias"]
+  publishersRow2 = ["piggysam", "poulet-payant", "rafaella", "tourniquet", "etoile-de-mer", "routine", "coupe-carree", "alias"]
 
   getTrendingWords(): void{
     this.wordService.getAllWords().subscribe((words: any) => {

@@ -1,0 +1,14 @@
+.tag{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 6px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: $font-size-sm;
+    background-color: $dark-grey;
+    color: white 
+}
+
+.home-publisher-tag{
+    @extend .tag;
+}
