@@ -8,11 +8,15 @@ import { WordService } from '../../services/word/word.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private wordService: WordService) {}
+  constructor(private wordService: WordService) {
+    this.definitionInProgress = {id: 0, name: "", definition: "", flagsCount: 0, dislikesCount: 0, likesCount: 0, creationTimestamp: "", example:"", tags: []}
+  }
 
   trendingWords: Word[] = [];
   publishers = ["samira", "piggysam", "poulet-payant", "rafaella", "tourniquet", "etoile-de-mer", "routine", "coupe-carree", "alias", "piggysam", "poulet-payant", "rafaella", "tourniquet", "etoile-de-mer", "routine", "coupe-carree", "alias"]
 
+
+  definitionInProgress: Word
   getTrendingWords(): void{
     this.wordService.getAllWords().subscribe((words: any) => {
       this.trendingWords = words; 
@@ -20,6 +24,10 @@ export class HomeComponent implements OnInit {
           word.tags = word.tags.split(', ')
       });
     });    
+  }
+
+  setDefinitionInProgress(): void{
+    this.wordService.setDefinitionInProgress(this.definitionInProgress);   
   }
 
   ngOnInit(): void {
