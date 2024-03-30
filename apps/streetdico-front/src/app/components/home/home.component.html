@@ -132,14 +132,14 @@
         <div class="col-12 over d-flex justify-content-center align-items-center pt-5 pb-5">
             <h3 class="sd-color-primary">DERNIERS CONTRIBUTEURS</h3>
         </div>
-        <div class="col-11 overflow-hidden d-flex justify-content-center align-items-center pb-4">
-            <div *ngFor="let publisher of publishersRow1" class="d-flex home-publisher-row">
-                <span class="home-publisher-tag mx-2">{{publisher}}</span>
+        <div class="col-11 home-publisher-row  d-flex justify-content-center align-items-center pb-5">
+            <div *ngFor="let publisher of publishersRow1" class="d-flex scrolling-tags">
+                <span class="home-publisher-tag ">{{publisher}}</span>
             </div>
         </div>
-        <div class="col-11 overflow-hidden d-flex justify-content-center align-items-center pb-5">
-            <div *ngFor="let publisher of publishersRow2" class="d-flex home-publisher-row">
-                <span class="home-publisher-tag mx-2">{{publisher}}</span>
+        <div class="col-11 home-publisher-row  d-flex justify-content-center align-items-center pb-5">
+            <div *ngFor="let publisher of publishersRow2" class="d-flex scrolling-tags">
+                <span class="home-publisher-tag ">{{publisher}}</span>
             </div>
         </div>
     </div>
