@@ -64,3 +64,30 @@
 .display-height{
     height: 80vh;
 }
+
+.scrolling-tags{
+  display: inline-block; /* Display items horizontally */
+  padding: 10px; /* Add padding for better readability */
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: scrolling-text 14s linear infinite;
+}
+
+.home-publisher-container{
+    background-color: $light-grey;
+}
+
+.home-publisher-row{
+    width: 100%;
+    overflow-x: hidden; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+@keyframes scrolling-tags {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+

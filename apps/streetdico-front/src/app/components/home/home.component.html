@@ -126,4 +126,23 @@
     </div>
 </div>
 
+<!-- Derniers contributeurs -->
+<div class="container-fluid home-publisher-container pb-4">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 over d-flex justify-content-center align-items-center pt-5 pb-5">
+            <h3 class="sd-color-primary">DERNIERS CONTRIBUTEURS</h3>
+        </div>
+        <div class="col-11 home-publisher-row  d-flex justify-content-center align-items-center pb-5">
+            <div *ngFor="let publisher of publishersRow1" class="d-flex scrolling-tags">
+                <span class="home-publisher-tag ">{{publisher}}</span>
+            </div>
+        </div>
+        <div class="col-11 home-publisher-row  d-flex justify-content-center align-items-center pb-5">
+            <div *ngFor="let publisher of publishersRow2" class="d-flex scrolling-tags">
+                <span class="home-publisher-tag ">{{publisher}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 <digitalvitae-footer></digitalvitae-footer>
