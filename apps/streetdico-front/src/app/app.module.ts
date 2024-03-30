@@ -10,6 +10,7 @@ import { HeaderHomeComponent } from './components/shared/core/header-home/header
 import { FooterComponent } from './components/shared/core/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AccountComponent } from './components/account/account.component';
+import { DefinitionComponent } from './components/definition/definition.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AccountComponent } from './components/account/account.component';
     HeaderHomeComponent,
     FooterComponent,
     AccountComponent,
+    DefinitionComponent
   ],
   imports: [BrowserModule, HttpClientModule, MatIconModule, AppRoutingModule],
   providers: [],

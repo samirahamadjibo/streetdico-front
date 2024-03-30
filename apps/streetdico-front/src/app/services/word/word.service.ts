@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 import { Word } from '../../models/word';
 import { HttpClient } from '@angular/common/http';
 
@@ -6,19 +7,25 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class WordService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.definitionInProgress = {id: 0, name: "", definition: "", flagsCount: 0, dislikesCount: 0, likesCount: 0, creationTimestamp: "", example:"", tags: []}
+  }
   private allWordsUrl = 'http://localhost:8080/api/v1/words';
+  private definitionInProgress: Word 
 
-  getAllWords() {
+  /** never expose the Subject itself. */
+  private definitionInProgressSubject = new Subject<Word>();
+   /** Observable of all messages */
+  definitionInProgress$ = this.definitionInProgressSubject.asObservable();
+
+  getAllWords(): Observable<Word[]>{
     return this.http.get<Word[]>(this.allWordsUrl);
   }
 
-  getWordInProgress() {
-    return {
-      id: -1,
-      name: 'Samira',
-      definition:
-        "créatrice du dictionnaire urbain. Exemple: Aujourd'hui je suis allée à la teuf de Roland, c'était hyper chouette. Je le referai surement et cela dans une meilleure vie",
-    };
+  setDefinitionInProgress(definition : Word){
+    this.definitionInProgress = definition;
+  }
+  getDefinitionInProgress(): Observable<Word> {
+    return  this.definitionInProgress$;
   }
 }
