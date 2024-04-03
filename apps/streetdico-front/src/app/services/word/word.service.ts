@@ -7,12 +7,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class WordService {
-  constructor(private http: HttpClient) {
-    this.definitionInProgress = {id: 0, name: "", definition: "", flagsCount: 0, dislikesCount: 0, likesCount: 0, creationTimestamp: "", example:"", tags: []}
-  }
+  constructor(private http: HttpClient) {}
   private allWordsUrl = 'http://localhost:8080/api/v1/words';
-  private definitionInProgress: Word 
 
+  definitionInProgress: any;
   /** never expose the Subject itself. */
   private definitionInProgressSubject = new Subject<Word>();
    /** Observable of all messages */
@@ -23,9 +21,10 @@ export class WordService {
   }
 
   setDefinitionInProgress(definition : Word){
-    this.definitionInProgress = definition;
+    this.definitionInProgress = definition
   }
   getDefinitionInProgress(): Observable<Word> {
-    return  this.definitionInProgress$;
+    this.definitionInProgressSubject.next(this.definitionInProgress)
+    return this.definitionInProgress$;
   }
 }

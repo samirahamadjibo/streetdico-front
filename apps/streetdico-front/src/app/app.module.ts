@@ -2,15 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { HeaderSimpleComponent } from './components/shared/core/header-simple/header-simple.component';
-import { HeaderHomeComponent } from './components/shared/core/header-home/header-home.component';
-import { FooterComponent } from './components/shared/core/footer/footer.component';
+import { HeaderSimpleComponent } from './components/shared/headers/header-simple/header-simple.component';
+import { HeaderHomeComponent } from './components/shared/headers/header-home/header-home.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AccountComponent } from './components/account/account.component';
-import { DefinitionComponent } from './components/definition/definition.component';
+import { DefinitionFormComponent } from './components/shared/definition-form/definition-form.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +24,9 @@ import { DefinitionComponent } from './components/definition/definition.componen
     HeaderHomeComponent,
     FooterComponent,
     AccountComponent,
-    DefinitionComponent
+    DefinitionFormComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, MatIconModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, MatIconModule, MatDialogModule, AppRoutingModule, FormsModule, CommonModule],
   providers: [],
   bootstrap: [AppComponent],
 })
