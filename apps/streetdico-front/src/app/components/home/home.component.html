@@ -8,7 +8,7 @@
     </div>
 
     <div class="row justify-content-center pb-2">
-        <div class="col-11 pt-5 px-3 d-flex flex-wrap mb-3 justify-content-start">
+        <div class="col-11 pt-5 px-3 d-flex flex-wrap mb-3 justify-content-center justify-content-md-start">
             <div *ngFor="let word of trendingWords">
                 <div class="word">
                     <div> <h5 class="name sd-underline-secondary">{{word.name}}</h5> </div>
@@ -50,7 +50,7 @@
     </div>
 </div>
 
-<div class="container-fluid pt-3 pb-5 sd-bg-white">
+<div class="container-fluid pt-3 pb-5 mb-5 sd-bg-white">
     <div class="row d-flex justify-content-center">
  
         <div class="col-11 sd-bg-light-grey home-page-form-container col-md-8">
@@ -75,19 +75,22 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-7">
-                    <form>
-                        <div class="my-4">
+                    <form #definitionForm="ngForm">
+                        <div class="form-group my-4">
                             <label for="homePageFormWord" class="form-label pb-2 fs-sm">Ton mot</label>
                             <input type="text" class="sd-form-control home-page-form-word" id="homePageFormWord"
-                                placeholder="Bicrave..">
+                                placeholder="Bicrave.."
+                                [(ngModel)]="definitionInProgress.name" name="name">
                         </div>
-                        <div class="my-4">
+                        <div class="form-group my-4">
                             <label for="homePageFormDefinition" class="form-label pb-2 fs-sm">Ta définition</label>
-                            <textarea class="sd-form-control home-page-form-word" id="homePageFormDefinition" rows="3"
-                                placeholder="Fumer ..."></textarea>
+                            <textarea class="sd-form-control home-page-form-word" type="text" id="homePageFormDefinition" rows="3"
+                                placeholder="Fumer ..."
+                                [(ngModel)]="definitionInProgress.definition" name="definition">
+                                </textarea>
                         </div>
                         <div class="d-flex py-3">
-                            <div class="sd-btn-primary d-none d-md-block">Continuer | Se connecter</div>
+                            <div class="sd-btn-primary d-none d-md-block" (click)="onSubmit()">Continuer</div>
                         </div>
                     </form>
                 </div>
@@ -96,48 +99,9 @@
     </div>
 </div>
 
-
-<!-- Rajout d'un mot -->
-<div class="container-fluid pb-5 sd-bg-white pt-5">
-    <div class="row justify-content-center pb-3">
-        <div class="col-11 d-flex flex-column justify-content-center align-items-center">
-            <h3 class="mb-1 fw-bold mb-2">TOUJOURS EN TRAIN DE SCROLLER ?</h3>
-            <div class="sd-undertitle">Rajoute tes définitons !</div>
-        </div>
-    </div>
-
-    <div class="row mb-5 justify-content-center">
-        <div class="col-11 col-md-7 col-xl-7 ms-4 ms-md-5">
-            <form>
-                <div class="my-4">
-                    <label for="homeSearchBar2" class="form-label pb-2"> <span class="fs-sm">Recherche un mot</span></label>
-                    <div class="input-group">
-                        <span class="sd-input-group-text home-search-bar-2"><i class="bi bi-search"></i></span>
-                        <input type="text" class="sd-form-control search-bar home-search-bar-2" id="homeSearchBar2" placeholder="Oui, c'est ici ..">
-                        <div class="d-flex align-items-center ms-3">
-                            <div class="sd-btn-link-primary fs-sm">rechercher
-                                <i class="bi bi-chevron-double-right ms-2 "></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+<div class="container my-5 py-3">
+    <div class="row"></div>
 </div>
 
-<!-- Derniers contributeurs -->
-<div class="container-fluid home-publisher-container pb-4">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-12 over d-flex justify-content-center align-items-center pt-5 pb-4">
-            <h3 class="sd-color-primary">DERNIERS CONTRIBUTEURS</h3>
-        </div>
-        <div class="col-11 home-publisher-row d-flex flex-wrap justify-content-center align-items-center pb-5">
-            <div *ngFor="let publisher of publishers" class="d-flex my-3 mx-2">
-                <span class="home-publisher-tag">{{publisher}}</span>
-            </div>
-        </div>
-    </div>
-</div>
-
+<digitalvitae-last-publishers></digitalvitae-last-publishers>
 <digitalvitae-footer></digitalvitae-footer>

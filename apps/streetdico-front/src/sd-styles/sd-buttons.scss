@@ -38,8 +38,20 @@
     text-decoration: none;
 }
 
+.sd-btn-link-nude{
+    @extend .sd-btn-link;
+}
+
 .sd-btn-link-secondary {
     @extend .sd-btn-link;
+}
+.sd-btn-link:hover{
+    color: $secondary;
+    cursor: pointer;
+}
+.sd-btn-link-nude:hover{
+    color: inherit;
+    cursor: pointer;
 }
 .sd-btn-link-secondary:hover{
     color: $secondary;
