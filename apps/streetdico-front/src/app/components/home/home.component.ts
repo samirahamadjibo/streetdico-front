@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
   }
 
   trendingWords: Word[] = [];
-  publishers = ["samira", "piggysam", "poulet-payant", "rafaella", "tourniquet", "etoile-de-mer", "routine", "coupe-carree", "alias", "piggysam", "poulet-payant", "rafaella", "tourniquet", "etoile-de-mer", "routine", "coupe-carree", "alias"]
   definitionInProgress: Word
 
   getTrendingWords(): void{

@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
         <div class="col-11">
             <div class="h1 pb-5 pt-3 ff-body fs-5 fw-light sd-color-secondary">
-                <div *ngIf="definitionInProgress?.name || definitionInProgress === undefined; else elseBlock">
+                <div *ngIf="!definitionInProgress?.name || definitionInProgress === undefined; else elseBlock">
                     RAJOUTER UNE DÉFINITION
                 </div>
                 <ng-template #elseBlock> DEFINITION DU MOT &nbsp; "{{definitionInProgress?.name | uppercase}}"</ng-template>
@@ -12,7 +12,7 @@
     </div>
 </div>
 
-<div class="container my-5 pb-5">
+<div class="container mt-5 mb-2">
     <div class="row my-5 d-flex justify-content-center">
 
         <div class="col-11 sd-bg-light-grey home-page-form-container col-md-8">
@@ -48,7 +48,7 @@
                         <div class="form-group my-4 ms-2">
                             <mat-form-field>
                                 <mat-label class="form-label pb-2 fs-sm">Rajoute un tag</mat-label>
-                                <mat-select class="fs-sm">
+                                <mat-select class="fs-sm fw-light">
                                     <mat-option value="option1">Option 1</mat-option>
                                     <mat-option value="option2">Option 2</mat-option>
                                     <mat-option value="option3">Option 3</mat-option>
@@ -67,4 +67,16 @@
         </div>
     </div>
 </div>
+
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12 justify-content-center py-3">
+            <div class="d-flex justify-content-center">
+                <div class="sd-btn-primary d-none d-md-block" routerLink="/">Acceuil</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<digitalvitae-last-publishers></digitalvitae-last-publishers>
 <digitalvitae-footer></digitalvitae-footer>
