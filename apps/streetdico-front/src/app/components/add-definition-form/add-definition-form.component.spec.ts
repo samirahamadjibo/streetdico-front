@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DefinitionFormComponent } from './definition-form.component';
+import { DefinitionFormComponent } from './add-definition-form.component';
 
 describe('DefinitionFormComponent', () => {
   let component: DefinitionFormComponent;

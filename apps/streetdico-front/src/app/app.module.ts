@@ -5,6 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +16,7 @@ import { HeaderHomeComponent } from './components/shared/headers/header-home/hea
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AccountComponent } from './components/account/account.component';
-import { DefinitionFormComponent } from './components/shared/definition-form/definition-form.component';
+import { DefinitionFormComponent } from './components/add-definition-form/add-definition-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { DefinitionFormComponent } from './components/shared/definition-form/def
     AccountComponent,
     DefinitionFormComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, MatIconModule, MatDialogModule, AppRoutingModule, FormsModule, CommonModule],
+  imports: [BrowserModule, HttpClientModule, MatIconModule, MatDialogModule, AppRoutingModule, FormsModule, CommonModule, MatSelectModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

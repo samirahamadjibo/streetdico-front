@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AccountComponent } from './components/account/account.component';
-import { DefinitionFormComponent } from './components/shared/definition-form/definition-form.component';
+import { DefinitionFormComponent } from './components/add-definition-form/add-definition-form.component';
 
 
 const routes: Routes = [
