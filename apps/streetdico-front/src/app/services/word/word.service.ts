@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WordService {
   constructor(private http: HttpClient) {}
-  private allWordsUrl = 'http://localhost:8080/api/v1/words';
+  private allWordsUrl = 'https://z9jtzpzqv1.execute-api.eu-west-1.amazonaws.com/uat';
 
   definitionInProgress: Word | undefined;
 
