@@ -14,9 +14,9 @@ import { HeaderSimpleComponent } from './components/shared/headers/header-simple
 import { HeaderHomeComponent } from './components/shared/headers/header-home/header-home.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AccountComponent } from './components/account/account.component';
 import { DefinitionFormComponent } from './components/add-definition-form/add-definition-form.component';
 import { LastPublishersComponent } from './components/shared/last-publishers/last-publishers.component';
+import { AccountComponent } from './components/account/account.component';
 
 @NgModule({
   declarations: [
