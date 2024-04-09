@@ -14,6 +14,7 @@ export class WordService {
 
 
   getAllWords(): Observable<Word[]>{
+    console.log(this.http.get<Word[]>(this.allWordsUrl))
     return this.http.get<Word[]>(this.allWordsUrl);
   }
 
