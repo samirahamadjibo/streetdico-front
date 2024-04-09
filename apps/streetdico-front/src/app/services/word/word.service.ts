@@ -14,8 +14,9 @@ export class WordService {
 
 
   getAllWords(): Observable<Word[]>{
-    console.log(this.http.get<Word[]>(this.allWordsUrl))
-    return this.http.get<Word[]>(this.allWordsUrl);
+    const test = this.http.get<Word[]>(this.allWordsUrl);
+    console.log(test)
+    return test;
   }
 
   setDefinitionInProgress(definition : Word){
