@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Word } from '../../models/word';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WordService {
   constructor(private http: HttpClient) {}
-  private allWordsUrl = 'https://z9jtzpzqv1.execute-api.eu-west-1.amazonaws.com/uat/tendances';
+  private allWordsUrl = 'https://le-dictionnaire-urbain.fr/api/tendances';
 
   definitionInProgress: Word | undefined;
 
