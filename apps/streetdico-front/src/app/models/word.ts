@@ -4,8 +4,10 @@ export interface Word {
     definition: string;
     example: string;
     tags: [];
-    flagsCount: number;
-    likesCount: number;
-    dislikesCount: number;
-    creationTimestamp: string
+    flags_count: number;
+    likes_count: number;
+    dislikes_count: number;
+    created_at: string;
+    publisher_id: number;
+    publisher_name: string
 }
