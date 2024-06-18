@@ -20,20 +20,18 @@ export class HomeComponent implements OnInit {
   getTrendingWords(): void{
     this.wordService.getAllWords().subscribe((words: any) => {
       this.trendingWords = words; 
-      this.trendingWords.forEach((word: any) => {
+      this.trendingWords.forEach((word: any, index) => {
           word.tags = word.tags.split(', ')
-          this.getPublisherName(word.publisher_id)
+          this.getPublisherName(word.publisher_id, index)
       });
       
     });    
   }
 
-  getPublisherName(publisherId: number){
+  getPublisherName(publisherId: number, index: number){
     this.wordService.getPublisherName(publisherId).subscribe((name: any) => {
-      this.trendingWords.forEach((word: any) => {
-        word.publisher_name = name[0].pseudo;
-      }
-    )}); 
+        this.trendingWords[index].publisher_name = name[0].pseudo;
+    }); 
   }
 
   onSubmit() { 
