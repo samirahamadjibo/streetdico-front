@@ -17,6 +17,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { DefinitionFormComponent } from './components/add-definition-form/add-definition-form.component';
 import { LastPublishersComponent } from './components/shared/last-publishers/last-publishers.component';
 import { AccountComponent } from './components/account/account.component';
+import { SecondarySearchFieldComponent } from './components/shared/secondary-search-field/secondary-search-field.component';
+import { TrendingWordsComponent } from './components/shared/trending-words/trending-words.component';
+import { AddWordFormComponent } from './components/shared/add-word-form/add-word-form.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { AccountComponent } from './components/account/account.component';
     AccountComponent,
     DefinitionFormComponent,
     LastPublishersComponent,
+    SecondarySearchFieldComponent,
+    TrendingWordsComponent,
+    AddWordFormComponent,
   ],
   imports: [
     BrowserModule,
