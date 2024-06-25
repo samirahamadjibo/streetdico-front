@@ -1,8 +1,8 @@
 <digitalvitae-header-home></digitalvitae-header-home>
-<div class="container-fluid sd-bg-white ps-4 ps-md-2 pt-5">
+<div class="container-fluid sd-bg-white sd-color-black ps-md-2 pt-5">
     <div class="row d-flex justify-content-center pb-3">
         <div class="col-11">
-            <h3 class="mb-1 fw-bold mb-2">LES MOTS TENDANCE</h3>
+            <h3 class="mb-1 fw-bold mb-2 ff-body fs-2">Les mots en tendance 🔥</h3>
             <div class="sd-undertitle">La/les définition(s) en tendance</div>
         </div>
     </div>
@@ -42,67 +42,37 @@
 
 
 <!-- Rajout d'un mot -->
-<div class="container-fluid pb-2 sd-bg-white">
-    <div class="row justify-content-center pb-1">
-        <div class="col-11 d-flex flex-column justify-content-center align-items-center">
-            <h3 class="mb-1 fw-bold mb-2">A TOI DE JOUER !</h3>
-            <div class="sd-undertitle">Rajoute tes définitons !</div>
+
+<div class="container-fluid sd-color-black pb-5 pt-5 sd-bg-light-grey">
+    <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-11 d-flex flex-column align-items-center">
+            <h3 class="mb-1 ff-body fw-bold fs-2 mb-2">A toi de jouer !</h3>
+            <div class="sd-undertitle">Rajoute tes définitons</div>
         </div>
     </div>
-</div>
 
-<div class="container-fluid pt-3 pb-5 mb-5 sd-bg-white">
     <div class="row d-flex justify-content-center">
- 
-        <div class="col-11 sd-bg-light-grey home-page-form-container col-md-8">
-            <h5 class="pb-3 ff-body">Rajoute tes définitions et rentre dans l'histoire !</h5>
-            <div class="d-flex pb-5">
-                <div class="sd-btn-outline-dark d-none d-md-block">Gérer mes mots</div>
+        <div class="col-11 col-md-4 d-flex flex-column justify-content-center pe-md-5">
+            <div class="pb-5 d-flex align-items-center">
+                <div><i class="bi bi-check-circle-fill sd-color-primary fs-xxl me-4"></i></div>
+                <div class="">Rentres dans le mouvement le plus tendance du moment</div>
             </div>
-
-            <div class="row">
-                <div class="col-5 d-none d-md-flex flex-column justify-content-center pe-md-5">
-                    <div class="pb-5">
-                        <span><i class="bi bi-check-circle-fill sd-color-primary fs-xl me-3"></i></span>
-                        <span class="">Rentres dans le mouvement du moment</span>
-                    </div>
-                    <div class="pb-5">
-                        <span><i class="bi bi-check-circle-fill sd-color-primary fs-xl me-3"></i></span>
-                        <span class="">Recois un badge pour les definitions rajoutées</span>
-                    </div>
-                    <div class="pb-5">
-                        <span><i class="bi bi-check-circle-fill sd-color-primary fs-xl me-3"></i></span>
-                        <span class="">Partage tes réalisations sur les réseaux sociaux</span>
-                    </div>
-                </div>
-                <div class="col-12 col-md-7">
-                    <form #definitionForm="ngForm">
-                        <div class="form-group my-4">
-                            <label for="homePageFormWord" class="form-label pb-2 fs-sm">Ton mot</label>
-                            <input type="text" class="sd-form-control home-page-form-word" id="homePageFormWord"
-                                placeholder="Bicrave.."
-                                [(ngModel)]="definitionInProgress.name" name="name">
-                        </div>
-                        <div class="form-group my-4">
-                            <label for="homePageFormDefinition" class="form-label pb-2 fs-sm">Ta définition</label>
-                            <textarea class="sd-form-control home-page-form-word" type="text" id="homePageFormDefinition" rows="3"
-                                placeholder="Fumer ..."
-                                [(ngModel)]="definitionInProgress.definition" name="definition">
-                                </textarea>
-                        </div>
-                        <div class="d-flex py-3">
-                            <div class="sd-btn-primary" (click)="onSubmit()">Continuer</div>
-                        </div>
-                    </form>
-                </div>
+            <div class="pb-5 d-flex align-items-center">
+                <div><i class="bi bi-check-circle-fill sd-color-primary fs-xxl me-4"></i></div>
+                <div class="">Recois un badge pour chacune de tes definitions rajoutées</div>
             </div>
+            <div class="d-flex align-items-center">
+                <div><i class="bi bi-check-circle-fill sd-color-primary fs-xxl me-4"></i></div>
+                <div class="">Partage toutes tes réalisations sur les réseaux sociaux</div>
+            </div>
+        </div>
+        <div class="col-11 col-md-4 d-flex flex-column justify-content-center ps-md-5 lh-lg">
+            <div class="pb-3 fs-xxxl fw-bold ff-body">Rajoute tes définitions et <span class="sd-color-primary">rentre dans
+                    l'histoire !</span></div>
         </div>
     </div>
 </div>
 
-<div class="container my-5 py-3">
-    <div class="row"></div>
-</div>
 
 <digitalvitae-last-publishers></digitalvitae-last-publishers>
 <digitalvitae-footer></digitalvitae-footer>

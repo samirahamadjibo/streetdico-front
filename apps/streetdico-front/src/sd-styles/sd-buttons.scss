@@ -35,6 +35,7 @@
 
 .sd-btn-link {
     @extend .btn-link;
+    color: $dark-grey;
     text-decoration: none;
 }
 
@@ -46,7 +47,7 @@
     @extend .sd-btn-link;
 }
 .sd-btn-link:hover{
-    color: $secondary;
+    color: $primary;
     cursor: pointer;
 }
 .sd-btn-link-nude:hover{

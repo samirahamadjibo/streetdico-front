@@ -3,7 +3,7 @@
     line-height: 2.2;
     border-top-right-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
-    border: white;
+    border: 1px solid;
 }
 .sd-form-control.footer-search-bar{
     @extend .sd-form-control, .search-bar;
@@ -11,6 +11,7 @@
     border-top-right-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
     font-size: $font-size-sm;
+    border: 1px solid black;
 }
 .sd-form-control.home-search-bar{
     @extend .sd-form-control, .search-bar;
@@ -48,7 +49,7 @@
 }
 
 .secondary-banner{
-    background-color: $dark-grey;
+    background-color: $splash-color;
     z-index: 3;
     @media(max-width: map-get($map: $grid-breakpoints, $key: sm)){height: 10vh;};
 }

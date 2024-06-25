@@ -15,7 +15,7 @@ body {
     font-family: 'Montserrat' !important;
     font-weight: $font-weight-light;
     background-color: white;
-    color: $dark-grey
+    color: $splash-color
 }
 
 ul {
@@ -25,9 +25,12 @@ ul {
 .sd-color-white {
     color: white;
 }
+.sd-color-black {
+    color: black;
+}
 
-.sd-color-black-grey {
-    color: $dark-grey
+.sd-color-spash {
+    color: $splash-color
 }
 
 .sd-color-secondary {
@@ -41,6 +44,9 @@ ul {
 }
 .sd-bg-dark-grey {
     background-color: $dark-grey;
+}
+.sd-bg-spash {
+    background-color: $splash-color;
 }
 .sd-bg-white {
     background-color: white;
@@ -71,8 +77,8 @@ h6 {
 
 .sd-input-group-text {
     @extend .input-group-text;
-    background-color: #f5f5f5;
-    border-color: #f5f5f5;
+    background-color: $secondary;
+    border-color: $black;
 }   
 
 .sd-form-control.search-bar:focus {
@@ -92,8 +98,18 @@ h6 {
 .fs-xl {
     font-size: $font-size-xl;
 }
+.fs-xxl{
+    font-size: 2*$font-size-base;
+}
+.fs-xxxl{
+    font-size: 2.7*$font-size-base;
+}
 .fs-xs {
     font-size: $font-size-xs;
+}
+
+.lh-lg{
+    line-height: 1.5 !important;
 }
 
 .fw-extra-bold{
@@ -147,4 +163,8 @@ h6 {
 
 .fs-underline{
     text-decoration: underline;
+}
+
+.fs-2{
+    font-size: $h2-font-size !important;
 }
