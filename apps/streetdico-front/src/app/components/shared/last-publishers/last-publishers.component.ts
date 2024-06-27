@@ -17,12 +17,11 @@ import { WordService } from '../../../services/word/word.service';
         names.forEach((name: any) => {
           this.publishersNameList.push(name.pseudo);
         });
+        this.publishersNameList.reverse()
       }); 
     }
 
     ngOnInit(): void {
-        this.getPublishersNameList()
-        console.log(this.publishersNameList);
-        
+        this.getPublishersNameList()        
     }
 }
