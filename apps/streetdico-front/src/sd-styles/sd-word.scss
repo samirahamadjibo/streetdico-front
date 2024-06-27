@@ -6,6 +6,7 @@
 .word{
     @extend .word-size;
     //height: 320px;
+    color: black;
     background-color: $light-grey;
     box-shadow: 0px 0px 22px 4px rgba(0,0,0,0.09);
     padding: 20px 30px;

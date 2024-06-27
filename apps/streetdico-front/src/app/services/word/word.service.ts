@@ -18,8 +18,13 @@ export class WordService {
     return this.http.get<Word[]>(this.allWordsUrl);
   }
   getPublisherName(publisherId: number): Observable<string>{    
-    const getPublisherNameurl = `https://fa6ayynwlh.execute-api.eu-west-1.amazonaws.com/uat/sd-word-api-publisher-name-lambda?publisher_id=${publisherId}`;
-    return this.http.get<string>(getPublisherNameurl);
+    const getPublisherNameUrl = `https://fa6ayynwlh.execute-api.eu-west-1.amazonaws.com/uat/sd-word-api-publisher-name-lambda?publisher_id=${publisherId}`;
+    return this.http.get<string>(getPublisherNameUrl);
+  }
+
+  getPublishersNameList(): Observable<string>{    
+    const getPublishersNameListUrl = `https://fa6ayynwlh.execute-api.eu-west-1.amazonaws.com/uat/sd-word-api-publishers-name-list`;
+    return this.http.get<string>(getPublishersNameListUrl);
   }
 
   setDefinitionInProgress(definition : Word){
