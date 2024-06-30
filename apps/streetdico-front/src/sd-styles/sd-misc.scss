@@ -5,6 +5,16 @@
     border-bottom-right-radius: 10px !important;
     border: 1px solid;
 }
+
+.home-page-form-word:focus, .home-page-form-container:focus{
+    box-shadow: none !important;
+    background-color: inherit;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline{
+    background-color: white
+}
+
 .sd-form-control.footer-search-bar{
     @extend .sd-form-control, .search-bar;
     line-height: 1.8;

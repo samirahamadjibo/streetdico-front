@@ -20,6 +20,8 @@ import { AccountComponent } from './components/account/account.component';
 import { SecondarySearchFieldComponent } from './components/shared/secondary-search-field/secondary-search-field.component';
 import { TrendingWordsComponent } from './components/shared/trending-words/trending-words.component';
 import { AddWordFormComponent } from './components/shared/add-word-form/add-word-form.component';
+import {MatInputModule} from '@angular/material/input'
+
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { AddWordFormComponent } from './components/shared/add-word-form/add-word
     CommonModule,
     MatSelectModule,
     BrowserAnimationsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
