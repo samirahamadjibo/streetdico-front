@@ -1,6 +1,25 @@
 import { Component, Inject} from '@angular/core';
-import {NgForm} from '@angular/forms';
+import {ErrorStateMatcher} from '@angular/material/core';
+import {FormControl, FormGroupDirective, NgForm} from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
+
+export class LongErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    const isValue = control?.value
+    
+    return !!( isSubmitted && !isValue) || ((isSubmitted && isValue) && control.value.length<10);
+  }
+}
+
+export class ShortErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    const isValue = control?.value
+    
+    return !!( isSubmitted && !isValue) || ((isSubmitted && isValue) && control.value.length<2);
+  }
+}
 
 @Component({
   selector: 'digitalvitae-add-word-form',
@@ -10,17 +29,18 @@ import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dial
 export class AddWordFormComponent {
   constructor(public dialog: MatDialog){}
 
+  longMatcher = new LongErrorStateMatcher();
+  shortMatcher = new ShortErrorStateMatcher();
+
   onSubmit(addWordForm: NgForm) {
-    console.log();
-    
-    if (addWordForm.valid && addWordForm.value.definition.length > 10 && addWordForm.value.example.length > 10){
+    if (addWordForm.valid){
       this.openDialog(addWordForm)
     }
   }
 
   openDialog(addWordForm: NgForm): void {
     const dialogRef = this.dialog.open(DialogComponent, {
-      width: '750px',
+      width: '450px',
       data: {name: addWordForm.value.pseudo}
     });
 
