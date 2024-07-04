@@ -5,8 +5,5 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './secondary-search-field.component.html',
   styleUrls: ['./secondary-search-field.component.scss'],
 })
-export class SecondarySearchFieldComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class SecondarySearchFieldComponent {
 }
