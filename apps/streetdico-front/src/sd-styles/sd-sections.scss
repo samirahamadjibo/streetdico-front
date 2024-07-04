@@ -10,8 +10,8 @@
 }
 
 .home-stripes {
-    right: -84px !important;
-    bottom: -90px !important;
+    right: 100px !important;
+    bottom: 0px !important;
 }
 .auth-stripes {
     left: 0px !important;
@@ -32,4 +32,18 @@
 
 .section-header{
     background-color: $splash-color;
+}
+.sd-bg-waves{
+    background-image: url("../assets/images/small-waves.gif");
+    background-size: cover;
+}
+
+.sd-bg-waves-static{
+   // background-color: #E7E6FB;
+    background-image: url("../assets/images/small-waves.png");
+    background-size: cover;
+}
+
+.sd-header{
+    border-bottom: 1px black solid;
 }

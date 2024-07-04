@@ -1,4 +1,8 @@
-<digitalvitae-header-home></digitalvitae-header-home>
+
+<div class="sd-bg-waves-static">
+    <digitalvitae-header-home></digitalvitae-header-home>
+</div>
+
 <div class="container-fluid sd-bg-white sd-color-black ps-md-2 pt-5">
     <div class="row d-flex justify-content-center pb-3">
         <div class="col-11">
@@ -11,57 +15,62 @@
 
 <!-- Rajout d'un mot -->
 
-<div class="container-fluid sd-color-black pb-5 pt-5 sd-bg-light-grey">
-    <div class="row justify-content-center mb-5 pb-5">
-        <div class="col-11 d-flex flex-column align-items-center">
-            <h3 class="mb-1 ff-body fw-bold fs-2 mb-2">A toi de jouer !</h3>
-            <div class="sd-undertitle">Rajoute tes définitons</div>
+    <div class="container-fluid sd-color-black py-5 sd-bg-light-grey">
+        <div class="row justify-content-center mb-5 pb-5">
+            <div class="col-11 d-flex flex-column align-items-center">
+                <h3 class="mb-1 ff-body fw-bold fs-2 mb-2">A toi de jouer !</h3>
+                <div class="sd-undertitle">Rajoute tes définitons</div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mb-5 pb-5">
+            <div
+                class="col-11 col-md-4 d-flex flex-column justify-content-center align-items-center pe-md-5 order-2 order-md-1">
+                <div class="pb-3 pb-md-5 d-flex align-items-center">
+                    <div><i class="bi bi-check-circle-fill sd-color-primary fs-xxl me-4"></i></div>
+                    <div class="">Rentres dans le mouvement le plus tendance du moment</div>
+                </div>
+                <div class="pb-3 pb-md-5 d-flex align-items-center">
+                    <div><i class="bi bi-check-circle-fill sd-color-primary fs-xxl me-4"></i></div>
+                    <div class="">Recois un badge pour chacune de tes definitions rajoutées</div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div><i class="bi bi-check-circle-fill sd-color-primary fs-xxl me-4"></i></div>
+                    <div class="">Partage toutes tes réalisations sur les réseaux sociaux</div>
+                </div>
+            </div>
+            <div
+                class="col-11 col-md-4 d-flex flex-column justify-content-center ps-md-5 lh-lg order-1 order-md-2 pb-5 pb-md-0">
+                <div class="pb-3 fs-xxxl fw-bold ff-body">Rajoute tes définitions et <span
+                        class="sd-color-primary">rentre dans
+                        l'histoire !</span></div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center my-5 py-3">
+            <div class="col-10 col-md-8">
+                <div class="horizontal-separator"></div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-11 col-md-3 pb-5 pb-md-0">
+                <div class="fs-2 fw-bold">C'est là que tu entres en jeu</div>
+                <div class="sd-undertitle">Rajoute ta définiton</div>
+            </div>
+            <div class="col-11 col-md-5">
+                <digitalvitae-add-word-form></digitalvitae-add-word-form>
+            </div>
         </div>
     </div>
 
-    <div class="row d-flex justify-content-center mb-5 pb-5">
-        <div class="col-11 col-md-4 d-flex flex-column justify-content-center align-items-center pe-md-5 order-2 order-md-1">
-            <div class="pb-3 pb-md-5 d-flex align-items-center">
-                <div><i class="bi bi-check-circle-fill sd-color-primary fs-xxl me-4"></i></div>
-                <div class="">Rentres dans le mouvement le plus tendance du moment</div>
-            </div>
-            <div class="pb-3 pb-md-5 d-flex align-items-center">
-                <div><i class="bi bi-check-circle-fill sd-color-primary fs-xxl me-4"></i></div>
-                <div class="">Recois un badge pour chacune de tes definitions rajoutées</div>
-            </div>
-            <div class="d-flex align-items-center">
-                <div><i class="bi bi-check-circle-fill sd-color-primary fs-xxl me-4"></i></div>
-                <div class="">Partage toutes tes réalisations sur les réseaux sociaux</div>
-            </div>
-        </div>
-        <div class="col-11 col-md-4 d-flex flex-column justify-content-center ps-md-5 lh-lg order-1 order-md-2 pb-5 pb-md-0">
-            <div class="pb-3 fs-xxxl fw-bold ff-body">Rajoute tes définitions et <span class="sd-color-primary">rentre dans
-                    l'histoire !</span></div>
-        </div>
-    </div>
-
-    <div class="row d-flex justify-content-center my-5 py-3">
-        <div class="col-10 col-md-8">
-            <div class="horizontal-separator"></div>
-        </div>
-    </div>
-
-    <div class="row d-flex justify-content-center">
-        <div class="col-11 col-md-3 pb-5 pb-md-0">
-            <div class="fs-2 fw-bold">C'est là que tu entres en jeu</div>
-            <div class="sd-undertitle">Rajoute ta définiton</div>
-        </div>
-        <div class="col-11 col-md-5">
-            <digitalvitae-add-word-form></digitalvitae-add-word-form>
-        </div>
-    </div>
+<div class="sd-bg-waves"> 
+    <digitalvitae-secondary-search-field></digitalvitae-secondary-search-field>
 </div>
-
-<digitalvitae-secondary-search-field></digitalvitae-secondary-search-field>
 
 
 <digitalvitae-last-publishers></digitalvitae-last-publishers>
-<div class="container-fluid sd-bg-light-grey py-5">
+<div class="container-fluid py-5">
     <div class="row d-flex justify-content-center my-3">
         <div class="col-10 col-md-8">
             <div class="horizontal-separator"></div>

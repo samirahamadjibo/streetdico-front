@@ -28,7 +28,11 @@
 }
 
 .sd-input-group-text.home-search-bar-2{
-    border: 1px solid black
+    border: 1px solid black;
+}
+
+.sd-input-group-text{
+    background-color: $accent !important;
 }
 
 .sd-form-control.home-search-bar-2{
@@ -81,10 +85,6 @@
   padding: 10px; /* Add padding for better readability */
   white-space: nowrap; /* Prevent text from wrapping */
   animation: scrolling-text 14s linear infinite;
-}
-
-.home-publisher-container{
-    background-color: $light-grey;
 }
 
 .home-publisher-row{
