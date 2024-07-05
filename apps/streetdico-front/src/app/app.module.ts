@@ -21,6 +21,8 @@ import { SecondarySearchFieldComponent } from './components/shared/secondary-sea
 import { TrendingWordsComponent } from './components/shared/trending-words/trending-words.component';
 import { AddWordFormComponent } from './components/shared/add-word-form/add-word-form.component';
 import {MatInputModule} from '@angular/material/input'
+import { ErrorStateMatcher } from '@angular/material/core';
+
 
 
 @NgModule({
@@ -49,7 +51,8 @@ import {MatInputModule} from '@angular/material/input'
     BrowserAnimationsModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
