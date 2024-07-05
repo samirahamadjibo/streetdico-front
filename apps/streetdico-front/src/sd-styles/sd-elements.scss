@@ -1,24 +1,7 @@
-.header-logo{
-    width: 65px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.footer-logo{
-    width: 45px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
-.home-stripes {
-    right: -84px !important;
-    bottom: -90px !important;
-}
-
-.sd-title{
-    @extend .fs-2;
-    font-weight: bold;
-}
-
-.sd-undertitle{
-    font-size: $font-size-sm;
+.sd-separator-highlight{
+    height: 50px;
+    border-bottom: 1px solid black;
+    width: 100%;
+    background: linear-gradient(0.25turn, $accent, $primary);
 }
