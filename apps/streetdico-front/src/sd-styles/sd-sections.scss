@@ -31,7 +31,7 @@
 }
 
 .section-header{
-    background-color: $splash-color;
+    background-color: $splash;
 }
 .sd-bg-waves{
     background-image: url("../assets/images/small-waves.gif");
@@ -42,10 +42,10 @@
    // background-color: #E7E6FB;
    // background-image: url("../assets/images/small-waves.png");
    // background-size: cover;
-   background-color: $splash-color;
+   background-color: $splash;
 }
 
 .sd-header{
-    background-color: $splash-color;
-    border-bottom: 1px black solid;
+    background-color: $splash;
+   // border-bottom: 1px black solid;
 }

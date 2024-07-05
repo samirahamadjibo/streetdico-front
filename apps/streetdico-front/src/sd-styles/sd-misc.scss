@@ -63,7 +63,7 @@
 }
 
 .secondary-banner{
-    background-color: $splash-color;
+    background-color: $splash;
     z-index: 3;
     @media(max-width: map-get($map: $grid-breakpoints, $key: sm)){height: 10vh;};
 }
