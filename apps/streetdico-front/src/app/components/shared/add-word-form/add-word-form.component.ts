@@ -1,6 +1,7 @@
 import { Component, Inject} from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
+import {FormGroup, FormControl} from '@angular/forms';
+import {Validators} from '@angular/forms';
 
 
 
@@ -9,25 +10,33 @@ import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dial
   templateUrl: './add-word-form.component.html',
   styleUrls: ['./add-word-form.component.scss'],
 })
-export class AddWordFormComponent {
+export class AddWordFormComponent{
   constructor(public dialog: MatDialog){}
 
 
-  onSubmit(addWordForm: NgForm) {    
-    if (addWordForm.valid){
-      this.openDialog(addWordForm)
+  addWordForm = new FormGroup({
+    name: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    definition: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    example: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    pseudo: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    tags: new FormControl(''),
+  });
+
+  onSubmit() {
+    if (this.addWordForm.valid){
+      this.openDialog(this.addWordForm)
     }
   }
 
 
-  openDialog(addWordForm: NgForm): void {
+  openDialog(addWordForm: FormGroup): void {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '450px',
       data: {name: addWordForm.value.pseudo}
     });
 
     dialogRef.afterClosed().subscribe(()=> {
-      addWordForm.resetForm()
+      //addWordForm.resetForm()
     });
   }
 }

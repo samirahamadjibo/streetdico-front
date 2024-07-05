@@ -21,7 +21,7 @@ import { SecondarySearchFieldComponent } from './components/shared/secondary-sea
 import { TrendingWordsComponent } from './components/shared/trending-words/trending-words.component';
 import { AddWordFormComponent } from './components/shared/add-word-form/add-word-form.component';
 import {MatInputModule} from '@angular/material/input'
-import { ErrorStateMatcher } from '@angular/material/core';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -49,7 +49,8 @@ import { ErrorStateMatcher } from '@angular/material/core';
     CommonModule,
     MatSelectModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [
   ],
