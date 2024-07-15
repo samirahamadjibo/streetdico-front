@@ -21,7 +21,7 @@ export class AddWordFormComponent{
     definition: new FormControl('', [Validators.required, Validators.minLength(10)]),
     example: new FormControl('', [Validators.required, Validators.minLength(10)]),
     pseudo: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    tags: new FormControl(''),
+    tags: new FormControl(''), 
   });
 
   onSubmit() {

@@ -20,10 +20,9 @@ import { AccountComponent } from './components/account/account.component';
 import { SecondarySearchFieldComponent } from './components/shared/secondary-search-field/secondary-search-field.component';
 import { TrendingWordsComponent } from './components/shared/trending-words/trending-words.component';
 import { AddWordFormComponent } from './components/shared/add-word-form/add-word-form.component';
-import {MatInputModule} from '@angular/material/input'
-import {ReactiveFormsModule} from '@angular/forms';
-
-
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SearchBarComponent } from './components/shared/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +37,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     SecondarySearchFieldComponent,
     TrendingWordsComponent,
     AddWordFormComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,10 +50,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatSelectModule,
     BrowserAnimationsModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

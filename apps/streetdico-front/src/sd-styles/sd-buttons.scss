@@ -20,6 +20,11 @@
 
 }
 
+.sd-btn-icon-primary{
+    @extend .sd-btn-link-primary;
+    border: none;
+    background: none
+}
 .sd-btn-outline {
     @extend .btn-outline-primary;
     @extend .sd-btn;
