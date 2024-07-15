@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class TrendingWordsComponent implements OnInit {
   constructor(private wordService: WordService,  private router: Router) {
-    this.definitionInProgress = {id: 0, name: "", definition: "", flags_count: 0, dislikes_count: 0, likes_count: 0, created_at: "", example:"", tags: [], publisher_id:0, publisher_name:"anonyme"}
+    this.definitionInProgress = {id: 0, name: "", definition: "", flags_count: 0, dislikes_count: 0, likes_count: 0, created_at: "", example:"", tags:"", publisher_id:0, pseudo:"anonyme"}
   }
 
   trendingWords: Word[] = [];
@@ -20,7 +20,7 @@ export class TrendingWordsComponent implements OnInit {
     this.wordService.getAllWords().subscribe((words: any) => {
       this.trendingWords = words; 
       this.trendingWords.forEach((word: any, index) => {
-          word.tags = word.tags.split(', ')
+          word.tags = word.tags.split(',')
           this.getPublisherName(word.publisher_id, index)
       });
       
@@ -29,7 +29,7 @@ export class TrendingWordsComponent implements OnInit {
 
   getPublisherName(publisherId: number, index: number){
     this.wordService.getPublisherName(publisherId).subscribe((name: any) => {
-        this.trendingWords[index].publisher_name = name[0].pseudo;
+        this.trendingWords[index].pseudo = name[0].pseudo;
     }); 
   }
 

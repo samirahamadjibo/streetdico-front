@@ -2,6 +2,8 @@ import { Component, Inject} from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import {FormGroup, FormControl} from '@angular/forms';
 import {Validators} from '@angular/forms';
+import { WordService } from '../../../services/word/word.service';
+
 
 
 
@@ -11,7 +13,7 @@ import {Validators} from '@angular/forms';
   styleUrls: ['./add-word-form.component.scss'],
 })
 export class AddWordFormComponent{
-  constructor(public dialog: MatDialog){}
+  constructor(public dialog: MatDialog, private wordService: WordService){}
 
 
   addWordForm = new FormGroup({
@@ -24,19 +26,27 @@ export class AddWordFormComponent{
 
   onSubmit() {
     if (this.addWordForm.valid){
-      this.openDialog(this.addWordForm)
+      this.openDialog(this.addWordForm)      
     }
-  }
+    const newWord: any = {
+      name: this.addWordForm.value.name,
+      definition: this.addWordForm.value.definition,
+      example: this.addWordForm.value.example,
+      pseudo: this.addWordForm.value.pseudo,
+      tags: this.addWordForm.value.tags
+    }
 
+    this.wordService.postNewWord(newWord).subscribe(); 
+  }
 
   openDialog(addWordForm: FormGroup): void {
     const dialogRef = this.dialog.open(DialogComponent, {
-      width: '450px',
+      width: '500px',
       data: {name: addWordForm.value.pseudo}
     });
 
     dialogRef.afterClosed().subscribe(()=> {
-      //addWordForm.resetForm()
+      this.addWordForm.reset()
     });
   }
 }

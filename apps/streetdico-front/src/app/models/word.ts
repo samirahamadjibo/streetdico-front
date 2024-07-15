@@ -1,13 +1,13 @@
 export interface Word {
-    id: number;
-    name: string;
-    definition: string;
-    example: string;
-    tags: [];
-    flags_count: number;
-    likes_count: number;
-    dislikes_count: number;
-    created_at: string;
-    publisher_id: number;
-    publisher_name: string
+    id: number | undefined | null;
+    name: string | undefined | null;
+    definition: string | undefined | null;
+    example: string | undefined | null;
+    tags: string | undefined | null;
+    flags_count: number | undefined | null;
+    likes_count: number | undefined | null;
+    dislikes_count: number | undefined | null;
+    created_at: string | undefined | null;
+    publisher_id: number | undefined | null;
+    pseudo: string | undefined | null;
 }

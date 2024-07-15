@@ -1,10 +1,10 @@
-<form [formGroup]="addWordForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="addWordForm">
     <div class="form-group mb-4">
         <mat-form-field appearance="outline" class="w-100">
             <mat-label for="homePageFormWord" class="form-label pb-2 fs-sm">Ton mot</mat-label>
             <input matInput type="text" class="sd-form-control home-page-form-word" id="homePageFormWord" placeholder="Bicrave.." formControlName="name" required>
             <mat-error *ngIf="addWordForm.invalid">
-                Oops, ce champs doit faire au moins 2 charactères...
+                Oops, ce champs doit faire au moins <strong>2</strong> charactères...
             </mat-error>
         </mat-form-field>
     </div>
@@ -12,9 +12,9 @@
         <mat-form-field appearance="outline" class="w-100">
             <mat-label for="homePageFormDefinition" class="form-label pb-2 fs-sm">Ta définition</mat-label>
             <textarea matInput class="sd-form-control home-page-form-word" type="text" id="homePageFormDefinition" rows="4"
-            placeholder="Fumer ..." formControlName="definition"></textarea>
+            placeholder="Fumer ..." formControlName="definition" required></textarea>
             <mat-error *ngIf="addWordForm.invalid">
-                Oops, ce champs doit faire au moins 10 charactères.
+                Oops, ce champs doit faire au moins <strong>10</strong> charactères.
             </mat-error>
         </mat-form-field>
     </div>
@@ -24,7 +24,7 @@
             <textarea matInput placeholder="On bicrave dans la rue" class="sd-form-control home-page-form-word" id="homePageFormDefinition" ngModel required  rows="2"
          name="example" formControlName="example"></textarea>
         <mat-error *ngIf="addWordForm.invalid">
-            Oops, ce champs doit faire au moins 10 charactères.
+            Oops, ce champs doit faire au moins <strong>10</strong> charactères.
         </mat-error>
         </mat-form-field>
     </div>
@@ -32,23 +32,23 @@
         <mat-form-field appearance="outline" class="w-100">
             <mat-label for="homePageFormPseudo" class="form-label pb-2 fs-sm">Un pseudonyme ?</mat-label>
             <input type="text" matInput class="sd-form-control home-page-form-word" id="homePageForPseudo" 
-                placeholder="anonyme" formControlName="pseudo">
+                placeholder="anonyme" formControlName="pseudo" required>
             <mat-error *ngIf="addWordForm.invalid">
-                Oops, ce champs doit faire au moins 2 charactères...
+                Oops, ce champs doit faire au moins <strong>2</strong> charactères...
             </mat-error>
         </mat-form-field>
     </div>
     <div class="form-group my-4 ms-2">
         <mat-form-field >
             <mat-label class="form-label pb-2 fs-sm">Rajoute un tag</mat-label>
-            <mat-select class="fs-sm fw-light" name="tags" formControlName="tag">
-                <mat-option value="verlan fs-xl">Verlan</mat-option>
-                <mat-option value="offensif fs-xl">Offensif</mat-option>
+            <mat-select class="fs-sm fw-light" name="tags" formControlName="tags" multiple>
+                <mat-option value="verlan">Verlan</mat-option>
+                <mat-option value="offensif">Offensif</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
 
     <div class="d-flex py-3">
-        <button class="sd-btn-primary" type="submit" [disabled]="!addWordForm.valid">Publier</button>
+        <button class="sd-btn-primary" type="button" (click)="onSubmit()" [disabled]="!addWordForm.valid">Publier</button>
     </div>
 </form>
