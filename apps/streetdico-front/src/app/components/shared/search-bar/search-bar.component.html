@@ -3,7 +3,7 @@
         <div class="col-12">
             <form [formGroup]="searchWordForm">
                 <div class="my-4">
-                    <label for="homeSearchBar" class="form-label pb-2" > <span class="fs-sm">Recherche un mot</span> <span *ngIf="searchWordForm.invalid && searchWordForm.touched" class="fs-error fs-sm">- commence par taper quelque chose !</span> </label>
+                    <label for="homeSearchBar" class="form-label pb-2" > <span class="fs-sm">Recherche un mot</span> <span *ngIf="searchWordForm.invalid && searchWordForm.touched " class="fs-error fs-sm">- commence par taper quelque chose !</span> </label>
                     <div class="input-group">
                         <span class="sd-input-group-text"><i class="bi bi-search"></i></span>
                         <input formControlName="name" type="text" class="sd-form-control search-bar home-search-bar" id="homeSearchBar" placeholder="Oui, c'est ici ..">

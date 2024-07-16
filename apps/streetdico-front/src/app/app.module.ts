@@ -14,7 +14,6 @@ import { HeaderSimpleComponent } from './components/shared/headers/header-simple
 import { HeaderHomeComponent } from './components/shared/headers/header-home/header-home.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DefinitionFormComponent } from './components/add-definition-form/add-definition-form.component';
 import { LastPublishersComponent } from './components/shared/last-publishers/last-publishers.component';
 import { AccountComponent } from './components/account/account.component';
 import { SecondarySearchFieldComponent } from './components/shared/secondary-search-field/secondary-search-field.component';
@@ -23,6 +22,8 @@ import { AddWordFormComponent } from './components/shared/add-word-form/add-word
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchBarComponent } from './components/shared/search-bar/search-bar.component';
+import { WordComponent } from './components/shared/word/word.component';
+import { WordDetailsComponent } from './components/word-details/word-details.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +33,13 @@ import { SearchBarComponent } from './components/shared/search-bar/search-bar.co
     HeaderHomeComponent,
     FooterComponent,
     AccountComponent,
-    DefinitionFormComponent,
     LastPublishersComponent,
     SecondarySearchFieldComponent,
     TrendingWordsComponent,
     AddWordFormComponent,
     SearchBarComponent,
+    WordComponent,
+    WordDetailsComponent,
   ],
   imports: [
     BrowserModule,

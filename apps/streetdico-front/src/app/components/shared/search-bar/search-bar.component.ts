@@ -30,6 +30,9 @@ export class SearchBarComponent{
     if (this.searchWordForm.valid && this.searchWordForm.value.name){ 
       this.getWordFromName(this.searchWordForm.value.name)
     }
+    else {
+      this.searchWordForm.markAsTouched()
+    }
   }
 
 }
