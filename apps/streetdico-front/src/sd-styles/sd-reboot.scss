@@ -37,7 +37,7 @@ ul {
     color: $secondary;
 }
 .sd-color-primary {
-    color: $primary;
+    color: $primary !important;
 }
 .sd-bg-light-grey{
     background-color: $light-grey ;
@@ -51,6 +51,9 @@ ul {
 .sd-bg-white {
     background-color: white;
     border-color: white;
+}
+.sd-color-red{
+    color: rgb(195, 15, 15) !important;
 }
 
 .sd-bg-medium-grey {

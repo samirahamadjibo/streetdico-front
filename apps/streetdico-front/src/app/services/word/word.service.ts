@@ -45,4 +45,14 @@ export class WordService {
     });
     return this.http.post<string>(postNewWordUrl, newWord, {headers});
   }
+
+  report(doReport: boolean, wordId: number): Observable<string>{    
+    const reportUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/report`;
+    return this.http.post<string>(reportUrl, {"doReport": doReport, "word_id": wordId});
+  }
+
+  like(doLike: boolean,  wordId: number): Observable<number>{    
+    const likeUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/like`;
+    return this.http.post<number>(likeUrl, {"doLike": doLike, "word_id": wordId});
+  }
 }

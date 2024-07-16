@@ -10,7 +10,8 @@
         <span>publié par: </span> <span class="sd-color-primary">{{word.pseudo}}</span>
     </div>
     <div class="my-2 likes-dislikes">
-        <span class="me-3"><i class="bi bi-hand-thumbs-up me-2"></i>{{word.likes_count}}</span> <span class="me-3"></span><i class="bi bi-hand-thumbs-down me-2"></i>{{word.dislikes_count}}<span class=""></span>
+        <button class="me-3 sd-btn-icon-primary" (click)="liked ? like(false): like(true)" [ngClass]="{'sd-color-primary': liked, 'sd-color-black': !liked}" ><i class="bi bi-hand-thumbs-up-fill me-2"></i>{{word.likes_count}}</button>
+        <button class="sd-btn-icon-primary" (click)="reported ? report(false) : report(true)" [ngClass]="{'sd-color-red': reported, 'fw-bold': reported, 'sd-color-black': !reported}"><i class="bi bi-flag-fill sd-color-red me-2"></i> <span *ngIf="reported">signalé</span> <span *ngIf="!reported">signaler</span> </button>
     </div>
     <div class="mt-4 mb-2">
         <span class="me-3 tags" *ngFor="let tag of tags">
