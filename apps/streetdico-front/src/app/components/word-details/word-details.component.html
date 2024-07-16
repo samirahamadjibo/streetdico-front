@@ -1,1 +1,5 @@
-<p>word-details works!</p>
+<digitalvitae-header-simple></digitalvitae-header-simple>
+
+<div *ngFor="let activeWord of activeWords">
+    <digitalvitae-word [word]="activeWord"></digitalvitae-word>
+</div>

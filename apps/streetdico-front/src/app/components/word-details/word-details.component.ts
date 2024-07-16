@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActiveWordsService } from '../../services/active-words/active-words.service';
+import { Word } from '../../models/word';
 
 @Component({
   selector: 'digitalvitae-word-details',
@@ -6,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./word-details.component.scss'],
 })
 export class WordDetailsComponent implements OnInit {
-  constructor() {}
+  constructor(private activeWordService: ActiveWordsService) {}
 
-  ngOnInit(): void {}
+  public activeWords: Word[] = []
+
+  ngOnInit(): void {
+    this.getActiveWords()
+  }
+
+  getActiveWords(){
+    this.activeWords = this.activeWordService.getActiveWords();
+  }
 }

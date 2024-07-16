@@ -21,7 +21,7 @@ export class WordService {
     const getPublisherNameUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/publisher-name?publisher_id=${publisherId}`;
     return this.http.get<string>(getPublisherNameUrl);
   }
-  getWordFromName(name: string): Observable<Word[]>{    
+  getWordFromName(name: string): Observable<Word[]>{       
     const getWordFromNameUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/search-word?name=${name}`;
     return this.http.get<Word[]>(getWordFromNameUrl);
   }
