@@ -14,7 +14,7 @@ export class WordComponent implements OnInit{
   public reported: boolean;
 
   constructor(private wordService: WordService) {
-    this.word = {id: 0, name: "", definition: "", flags_count: 0, dislikes_count: 0, likes_count: 0, created_at: "", example:"", tags:"", publisher_id:0, pseudo:"anonyme"}
+    this.word = {id: 0, name: "", definition: "", flags_count: 0, likes_count: 0, created_at: "", example:"", tags:"", publisher_id:0, pseudo:"anonyme"}
     this.tags = [];
     this.liked = false;
     this.reported = false;
