@@ -22,11 +22,11 @@ export class SearchBarComponent{
 
   onSubmit() {
     if (this.searchWordForm.valid && this.searchWordForm.value.name){ 
-
       this.wordService.getWordFromName(this.searchWordForm.value.name).subscribe((results: Word[]) => {
         this.activeWordService.setActiveWords(results);
       });
       this.router.navigate(['/word-details']);
+      this.searchWordForm.reset()
     }
     else {
       this.searchWordForm.markAsTouched()

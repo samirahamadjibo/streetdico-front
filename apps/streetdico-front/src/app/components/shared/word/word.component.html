@@ -4,16 +4,16 @@
         <p>{{word.definition}}</p>
     </div>
     <div class="example py-2">
-        <span class="fs-underline">Exemple: </span> <span>{{word.example}}</span>
+        <span class="fs-underline">Exp:</span> <span>  {{word.example}}</span>
     </div>
-    <div class="py-2 published-by">
+    <div class="pb-2 pt-4 published-by">
         <span>publié par: </span> <span class="sd-color-primary">{{word.pseudo}}</span>
     </div>
     <div class="my-2 likes-dislikes">
         <span class="me-3"><i class="bi bi-hand-thumbs-up me-2"></i>{{word.likes_count}}</span> <span class="me-3"></span><i class="bi bi-hand-thumbs-down me-2"></i>{{word.dislikes_count}}<span class=""></span>
     </div>
-    <div class="mt-4 mb-2 tags ">
-        <span class="sd-word-tag me-3" *ngFor="let tag of tags">
+    <div class="mt-4 mb-2">
+        <span class="me-3 tags" *ngFor="let tag of tags">
             {{tag}}
         </span>
     </div>

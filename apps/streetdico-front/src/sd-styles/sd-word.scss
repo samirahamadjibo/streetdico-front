@@ -1,11 +1,6 @@
-.word-size{
-    max-width: 250px;
-    margin: 30px 30px;
-}
-
 .word{
-    @extend .word-size;
     //height: 320px;
+    width: 300px;
     color: black;
     background-color: $light-grey;
     box-shadow: 0px 0px 22px 4px rgba(0,0,0,0.09);
@@ -22,7 +17,6 @@
     width: 200px;
     height: 280px;
     padding: 20px 26px;
-    font-size: $font-size-sm;
 }
 
 .sd-underline {
@@ -33,22 +27,23 @@
 .sd-underline-secondary{
     @extend .sd-underline;
     border-color: $secondary;
+    font-size: $font-size-xl;
+    font-weight: bold;
 }
 
 .word .name{
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 .word .definition{
-    font-size: $font-size-sm;
+    font-weight: bold;
 }
 .word .example{
-    font-size: $font-size-sm;
-    font-style: italic;
+    //font-style: italic;
 }
 .word .published-by{
-    font-size: $font-size-sm;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 .word .likes-dislikes{
@@ -56,5 +51,9 @@
 }
 
 .word .tags{
+    padding: 4px 10px;
+    border-radius: 10px;
+    background-color: $accent;
+    color: black;
     font-size: $font-size-sm;
 }

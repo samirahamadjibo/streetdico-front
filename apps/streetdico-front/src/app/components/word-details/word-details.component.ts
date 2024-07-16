@@ -11,7 +11,7 @@ export class WordDetailsComponent implements OnInit {
   constructor(private activeWordService: ActiveWordsService) {
     this.activeWords = [];
     this.title = "..."
-    this.isThereResult = true
+    this.isThereResult = false
   }
 
   public activeWords: Word[];
@@ -32,6 +32,7 @@ export class WordDetailsComponent implements OnInit {
       }
 
       else if(words[0].name){
+        this.isThereResult = true
         this.title = words[0].name;
       }
     });
