@@ -1,26 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Word } from '../../models/word';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ActiveWordsService {
-  private activeWords: Word[] = []
+  private activeWords = new Subject<Word[]>();
+  activeWords$ = this.activeWords.asObservable();
 
-  resetActiveWords(){
-    this.activeWords = []
-  }
+  latestActiveWords: Word[] = [] 
 
-  getActiveWords(){
-    return this.activeWords
-  }
 
   setActiveWords(words: Word[]) {
-    this.activeWords = words;
+    this.activeWords.next(words);
+    this.latestActiveWords = words;
   }
 
-  setActiveWord(word: Word){
-    this.activeWords.push(word);
+  getLatestActiveWord(): Word[]{
+    return this.latestActiveWords;
   }
-
 }
