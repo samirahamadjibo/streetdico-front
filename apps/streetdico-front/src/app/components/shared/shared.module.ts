@@ -15,10 +15,20 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { AppRoutingModule } from '../../app-routing.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AddWordFormComponent } from './add-word-form/add-word-form.component';
+import { AddWordComponent } from '../add-word/add-word.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from '../home/home.component';
+import { AccountComponent } from '../account/account.component';
+import { WordDetailsComponent } from '../word-details/word-details.component';
 
+const routes: Routes = [
+  { path: 'add-word', component: AddWordComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'account', component: AccountComponent },
+  { path: 'word-details', component: WordDetailsComponent }
+];
 
 @NgModule({
   declarations: [
@@ -33,11 +43,11 @@ import { AddWordFormComponent } from './add-word-form/add-word-form.component';
     WordComponent
   ],
   imports: [
+    RouterModule.forChild(routes),
     CommonModule,
     HttpClientModule,
     MatIconModule,
     MatDialogModule,
-    AppRoutingModule,
     FormsModule,
     CommonModule,
     MatSelectModule,

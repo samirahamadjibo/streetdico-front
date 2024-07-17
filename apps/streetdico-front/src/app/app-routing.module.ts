@@ -8,15 +8,14 @@ import { AddWordComponent } from './components/add-word/add-word.component';
 const rootRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'account', component: AccountComponent},
-  { path: 'add-word', component: AddWordComponent}
+  { path: 'add-word', component: AddWordComponent},
+  { path: 'word-details', loadChildren: () => import('./components/word-details/word-details.module').then(m => m.WordDetailsModule) }
 ];
 
-const lazyLoadedRoutes: Routes = [
-  { path: 'word-details', loadChildren: () => import('./components/word-details/word-details.module').then(m => m.WordDetailsModule) },
-];
+
 
 @NgModule({
-  imports: [ RouterModule.forRoot(rootRoutes), RouterModule.forChild(lazyLoadedRoutes) ],
+  imports: [ RouterModule.forRoot(rootRoutes)],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}

@@ -25,6 +25,7 @@ export class WordDetailsComponent implements OnInit{
     console.log("2" +this.title);
     
   }
+
   getSearchText(){
     this.activeWordService.searchText$.subscribe((text: string) => {
       this.title = text;
