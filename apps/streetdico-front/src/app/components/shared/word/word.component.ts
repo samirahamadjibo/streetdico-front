@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, Input, OnInit } from '@angular/core';
 import { Word } from '../../../models/word';
 import { WordService } from '../../../services/word/word.service';

@@ -14,7 +14,7 @@ export class TrendingWordsComponent implements OnInit {
   trendingWords: Word[] = [];
 
   getTrendingWords(): void{
-    this.wordService.getAllWords().subscribe((words: any) => {
+    this.wordService.getAllWords().subscribe((words: Word[]) => {
       this.trendingWords = words; 
     });    
   }
