@@ -7,11 +7,11 @@ import { Word } from '../../models/word';
   templateUrl: './word-details.component.html',
   styleUrls: ['./word-details.component.scss'],
 })
-export class WordDetailsComponent implements OnInit {
+export class WordDetailsComponent implements OnInit{
   constructor(private activeWordService: ActiveWordsService) {
     this.activeWords = [];
-    this.title = "..."
-    this.isThereResult = false
+    this.isThereResult = true;
+    this.title = "...";
   }
 
   public activeWords: Word[];
@@ -19,7 +19,17 @@ export class WordDetailsComponent implements OnInit {
   public isThereResult: boolean;
 
   ngOnInit(): void {
-    this.getActiveWords()
+    console.log("1"+ this.title);
+    this.getSearchText();
+    this.getActiveWords();
+    console.log("2" +this.title);
+    
+  }
+  getSearchText(){
+    this.activeWordService.searchText$.subscribe((text: string) => {
+      this.title = text;
+      console.log("3" +this.title);
+    });
   }
 
   getActiveWords(){
@@ -27,14 +37,7 @@ export class WordDetailsComponent implements OnInit {
       window.scrollTo(0, 0);
       this.activeWords = words;
 
-      if(words.length == 0){
-        this.isThereResult = false;
-      }
-
-      else if(words[0].name){
-        this.isThereResult = true
-        this.title = words[0].name;
-      }
+      this.isThereResult = words.length != 0
     });
   }
 }

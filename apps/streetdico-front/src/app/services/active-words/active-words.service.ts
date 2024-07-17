@@ -9,15 +9,17 @@ export class ActiveWordsService {
   private activeWords = new Subject<Word[]>();
   activeWords$ = this.activeWords.asObservable();
 
-  latestActiveWords: Word[] = [] 
+  private searchText = new Subject<string>();
+  searchText$ = this.searchText.asObservable();
+
 
 
   setActiveWords(words: Word[]) {
     this.activeWords.next(words);
-    this.latestActiveWords = words;
   }
 
-  getLatestActiveWord(): Word[]{
-    return this.latestActiveWords;
+  setSearchText(text: string) {
+    this.searchText.next(text);
   }
+
 }

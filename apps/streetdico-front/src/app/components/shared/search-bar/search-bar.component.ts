@@ -25,6 +25,7 @@ export class SearchBarComponent{
       this.wordService.getWordFromName(this.searchWordForm.value.name).subscribe((results: Word[]) => {
         this.activeWordService.setActiveWords(results);
       });
+      this.activeWordService.setSearchText(this.searchWordForm.value.name)
       this.router.navigate(['/word-details']);
       this.searchWordForm.reset()
     }

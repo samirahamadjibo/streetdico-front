@@ -3,7 +3,7 @@ export interface Word {
     name: string | null;
     definition: string | null;
     example: string | null;
-    tags: string  | null;
+    tags: string  | null | undefined;
     flags_count: number | null;
     likes_count: number | null;
     created_at: string  | null;

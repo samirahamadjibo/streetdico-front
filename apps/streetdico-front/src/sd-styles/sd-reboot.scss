@@ -103,7 +103,7 @@ h6 {
     font-size: $font-size-lg;
 }
 .fs-xl {
-    font-size: $font-size-xl;
+    font-size: $font-size-xl !important;
 }
 .fs-xxl{
     font-size: 2*$font-size-base;

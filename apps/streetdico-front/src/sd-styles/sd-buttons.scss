@@ -19,8 +19,10 @@
     @extend .sd-btn;
 
 }
-
-
+.sd-btn-dark{
+    @extend .btn-dark;
+    @extend .sd-btn;
+}
 .sd-btn-outline {
     @extend .btn-outline-primary;
     @extend .sd-btn;

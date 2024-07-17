@@ -21,8 +21,14 @@ export class WordService {
     const getPublisherNameUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/publisher-name?publisher_id=${publisherId}`;
     return this.http.get<string>(getPublisherNameUrl);
   }
-  getWordFromName(name: string): Observable<Word[]>{       
-    const getWordFromNameUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/search-word?name=${name}`;
+  getWordFromName(name: string): Observable<Word[]>{    
+    let getWordFromNameUrl = "";
+    if(name.length <= 2){
+      getWordFromNameUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/search-word?name=${name}`;
+    }   
+    else{
+      getWordFromNameUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/search-word/partial?name=${name}`;
+    }
     return this.http.get<Word[]>(getWordFromNameUrl);
   }
 
@@ -39,6 +45,7 @@ export class WordService {
   }
 
   postNewWord(newWord: Word): Observable<string>{    
+    newWord.tags = newWord.tags?.toString();
     const postNewWordUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/add-word`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
