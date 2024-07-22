@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { ShowAllWordsComponent } from './components/show-all-words/show-all-words.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     AccountComponent,
     AddWordComponent,
+    ShowAllWordsComponent,
   ],
   imports: [
     CommonModule,

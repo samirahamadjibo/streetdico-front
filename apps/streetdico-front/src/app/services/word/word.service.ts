@@ -17,10 +17,17 @@ export class WordService {
   getAllWords(): Observable<Word[]>{
     return this.http.get<Word[]>(this.allWordsUrl);
   }
+
   getPublisherName(publisherId: number): Observable<string>{    
     const getPublisherNameUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/publisher-name?publisher_id=${publisherId}`;
     return this.http.get<string>(getPublisherNameUrl);
   }
+
+  getPageWords(pageNumber: number, itemsPerPage: number): Observable<Word[]>{    
+    const getPageWordsUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/all-words?page_number=${pageNumber}&items_per_page=${itemsPerPage}`;
+    return this.http.get<Word[]>(getPageWordsUrl);
+  }
+  
   getWordFromName(name: string): Observable<Word[]>{    
     let getWordFromNameUrl = "";
     if(name.length <= 2){

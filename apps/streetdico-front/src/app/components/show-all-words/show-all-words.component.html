@@ -1,0 +1,30 @@
+<digitalvitae-header-simple></digitalvitae-header-simple>
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="ff-body fw-bold fs-2 mt-5">Tous les mots ! </h1>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 d-flex flex-wrap justify-content-center justify-content-md-start">
+            <div *ngFor="let word of pageWords">
+                <digitalvitae-word [word]="word"></digitalvitae-word>
+            </div>
+        </div>
+    </div>
+ </div>    
+ 
+ 
+ <div class="container my-4">
+    <div class="row">
+        <div class="col-12 d-flex align-items-center ms-5">
+            <button class="me-5 sd-btn-icon-primary fs-xl" (click)="previousPage()" [disabled]="this.pageNumber===0"><i class="bi bi-caret-left-square-fill"></i></button>
+            <div class="me-5 fw-bold">page {{pageNumber +1}}</div>
+            <button class="sd-btn-icon-primary fs-xl" (click)="nextPage()" [disabled]="this.noNext===true" ><i class="bi bi-caret-right-square-fill"></i></button>
+        </div>
+    </div>
+ </div>
