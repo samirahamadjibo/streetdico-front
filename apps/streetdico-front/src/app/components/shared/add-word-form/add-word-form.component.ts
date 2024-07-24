@@ -26,9 +26,7 @@ export class AddWordFormComponent{
   });
 
   onSubmit() {
-    if (this.addWordForm.valid){
-      this.openDialog(this.addWordForm)      
-    }
+    // pk ne pas envoyer directement la valeur du formulaire
     const newWord: any = {
       name: this.addWordForm.value.name,
       definition: this.addWordForm.value.definition,
@@ -37,7 +35,10 @@ export class AddWordFormComponent{
       tags: this.addWordForm.value.tags
     }
 
-    this.wordService.postNewWord(newWord).subscribe(); 
+    if (this.addWordForm.valid){
+      this.wordService.postNewWord(newWord).subscribe(); 
+      this.openDialog(this.addWordForm)      
+    }
   }
 
   openDialog(addWordForm: FormGroup): void {
