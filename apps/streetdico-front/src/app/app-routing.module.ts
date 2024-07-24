@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AccountComponent } from './components/account/account.component';
 import { AddWordComponent } from './components/add-word/add-word.component';
 import { ShowAllWordsComponent } from './components/show-all-words/show-all-words.component';
+import { SearchPageComponent } from './components/search-page/search-page.component';
 
 
 const rootRoutes: Routes = [
@@ -11,6 +12,7 @@ const rootRoutes: Routes = [
   { path: 'account', component: AccountComponent},
   { path: 'add-word', component: AddWordComponent},
   { path: 'show-all', component: ShowAllWordsComponent},
+  { path: 'search', component: SearchPageComponent},
   { path: 'word-details', loadChildren: () => import('./components/word-details/word-details.module').then(m => m.WordDetailsModule) }
 ];
 
