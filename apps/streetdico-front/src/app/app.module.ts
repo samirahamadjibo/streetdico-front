@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { ShowAllWordsComponent } from './components/show-all-words/show-all-words.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SearchPageComponent } from './components/search-page/search-page.compon
     AddWordComponent,
     ShowAllWordsComponent,
     SearchPageComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     CommonModule,
