@@ -12,12 +12,14 @@ export class WordComponent implements OnInit{
   @Input() word: Word;
   public tags: string[]
   public liked: boolean;
+  public disliked: boolean;
   public reported: boolean;
 
   constructor(private wordService: WordService) {
-    this.word = {id: 0, name: "", definition: "", flags_count: 0, likes_count: 0, created_at: "", example:"", tags:"", publisher_id:0, pseudo:"anonyme"}
+    this.word = {id: 0, name: "", definition: "", flags_count: 0, likes_count: 0, dislikes_count: 0, created_at: "", example:"", tags:"", publisher_id:0, pseudo:"anonyme"}
     this.tags = [];
     this.liked = false;
+    this.disliked = false;
     this.reported = false;
   }
 
@@ -44,6 +46,13 @@ export class WordComponent implements OnInit{
     this.liked = !this.liked
     this.wordService.like(doLike, this.word.id).subscribe((newCount: any) => {
       this.word.likes_count = newCount[0].likes_count;
+    }); 
+  }
+ 
+  dislike(doDislike: boolean){
+    this.disliked = !this.disliked;
+    this.wordService.dislike(doDislike, this.word.id).subscribe((newCount: any) => {
+      this.word.dislikes_count = newCount[0].dislikes_count;
     }); 
   }
 

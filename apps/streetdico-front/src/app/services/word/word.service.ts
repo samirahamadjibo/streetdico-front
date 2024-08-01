@@ -62,11 +62,16 @@ export class WordService {
 
   report(doReport: boolean, wordId: number): Observable<string>{    
     const reportUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/report`;
-    return this.http.post<string>(reportUrl, {"doReport": doReport, "word_id": wordId});
+    return this.http.post<string>(reportUrl, {"doReport": doReport, "wordId": wordId});
   }
 
   like(doLike: boolean,  wordId: number): Observable<number>{    
     const likeUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/like`;
-    return this.http.post<number>(likeUrl, {"doLike": doLike, "word_id": wordId});
+    return this.http.post<number>(likeUrl, {"doLike": doLike, "wordId": wordId});
+  }
+
+  dislike(doDislike: boolean,  wordId: number): Observable<number>{    
+    const dislikeUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/dislike`;
+    return this.http.post<number>(dislikeUrl, {"doDislike": doDislike, "wordId": wordId});
   }
 }
