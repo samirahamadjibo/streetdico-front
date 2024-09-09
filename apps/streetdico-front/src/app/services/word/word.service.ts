@@ -10,7 +10,6 @@ export class WordService {
   constructor(private http: HttpClient) {}
   private allWordsUrl = 'https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/trending-words';
 
-
   definitionInProgress: Word | undefined;
 
 
@@ -29,14 +28,8 @@ export class WordService {
   }
   
   getWordFromName(name: string): Observable<Word[]>{    
-    let getWordFromNameUrl = "";
-    if(name.length <= 2){
-      getWordFromNameUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/search-word?name=${name}`;
-    }   
-    else{
-      getWordFromNameUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/search-word/partial?name=${name}`;
-    }
-    return this.http.get<Word[]>(getWordFromNameUrl);
+    const getWordFromNameLevUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/search-word/lev?name=${name}`;
+    return this.http.get<Word[]>(getWordFromNameLevUrl);
   }
 
   getPublishersNameList(): Observable<string>{    
