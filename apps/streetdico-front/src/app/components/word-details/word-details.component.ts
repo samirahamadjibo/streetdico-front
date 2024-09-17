@@ -10,13 +10,13 @@ import { Word } from '../../models/word';
 export class WordDetailsComponent implements OnInit{
   constructor(private activeWordService: ActiveWordsService) {
     this.activeWords = [];
-    this.isThereResult = true;
+    this.isThereResult = undefined;
     this.title = "...";
   }
 
   public activeWords: Word[];
   public title: string;
-  public isThereResult: boolean;
+  public isThereResult: boolean|undefined;
 
   ngOnInit(): void {
     console.log("1"+ this.title);

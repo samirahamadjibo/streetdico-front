@@ -29,6 +29,8 @@ export class WordService {
   
   getWordFromName(name: string): Observable<Word[]>{    
     const getWordFromNameLevUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/search-word/lev?name=${name}`;
+    console.log(name);
+    
     return this.http.get<Word[]>(getWordFromNameLevUrl);
   }
 
