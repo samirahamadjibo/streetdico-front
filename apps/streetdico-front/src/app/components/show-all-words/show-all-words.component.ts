@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WordService } from '../../services/word/word.service';
 import { Word } from '../../models/word';
+import { finalize } from 'rxjs';
 
 @Component({
   selector: 'digitalvitae-show-all-words',
@@ -19,6 +20,7 @@ export class ShowAllWordsComponent implements OnInit {
   public pageNumber: number;
   public itemsPerPage: number;
   public noNext: boolean;
+  public isWordLoading = true;
 
 
   ngOnInit(): void {
@@ -30,14 +32,21 @@ export class ShowAllWordsComponent implements OnInit {
   }
 
   getActiveWords(){
-    this.wordService.getPageWords(this.pageNumber, this.itemsPerPage).subscribe((words: Word[]) => {
+    this.wordService.getPageWords(this.pageNumber, this.itemsPerPage).pipe(
+      finalize(() => {
+        this.isWordLoading = true;
+      })
+    ).subscribe((words: Word[]) => {
       window.scrollTo(0, 0);
       this.pageWords = words;
       if (this.pageWords.length < this.itemsPerPage ){
         this.noNext = true
       }
+
+      this.isWordLoading = false;
     });
   }
+
 
   previousPage(){
     if(this.pageNumber > 0){
