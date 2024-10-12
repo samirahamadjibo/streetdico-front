@@ -10,17 +10,17 @@ import { finalize, tap } from 'rxjs';
   styleUrls: ['./trending-words.component.scss'],
 })
 export class TrendingWordsComponent implements OnInit {
-  constructor(private wordService: WordService,  private router: Router) { 
-   }
-
+  constructor(private wordService: WordService,  private router: Router) { }
+  
+  skeletonWords: Word[] = [];  
   trendingWords: Word[] = [];
-  skeletonWords: Word[] = [];
   isWordLoading = true;
 
   setSkeletonWords(){
-    this.skeletonWords.push(new Word(0, "bonjour", "hello"))
-    this.skeletonWords.push(new Word(0, "bonjour", "hello"))
-    this.skeletonWords.push(new Word(0, "bonjour", "hello"))
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.trendingWords = this.skeletonWords
   }
 
   getTrendingWords(): void{
