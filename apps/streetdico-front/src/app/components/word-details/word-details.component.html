@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-12 d-flex flex-wrap justify-content-center justify-content-md-start">
             <div *ngFor="let activeWord of activeWords">
-                <digitalvitae-word [word]="activeWord"></digitalvitae-word>
+                <digitalvitae-word [word]="activeWord" [isWordLoading]="isWordLoading"></digitalvitae-word>
             </div>
             <div *ngIf="isThereResult" class="word d-flex flex-column align-items-center">
                 <div class="fw-bold mt-3 mb-2 mx-2 text-center">Tu ne trouves pas la définition parfaite ?</div>

@@ -10,6 +10,7 @@ import { WordService } from '../../../services/word/word.service';
 })
 export class WordComponent implements OnInit{
   @Input() word: Word;
+  @Input() isWordLoading: boolean;
   public tags: string[]
   public liked: boolean;
   public disliked: boolean;
@@ -17,6 +18,7 @@ export class WordComponent implements OnInit{
 
   constructor(private wordService: WordService) {
     this.word = {id: 0, name: "", definition: "", flags_count: 0, likes_count: 0, dislikes_count: 0, created_at: "", example:"", tags:"", publisher_id:0, pseudo:"anonyme"}
+    this.isWordLoading = true;
     this.tags = [];
     this.liked = false;
     this.disliked = false;
