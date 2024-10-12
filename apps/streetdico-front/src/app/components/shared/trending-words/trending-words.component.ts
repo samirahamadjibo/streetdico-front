@@ -24,7 +24,6 @@ export class TrendingWordsComponent implements OnInit {
   }
 
   getTrendingWords(): void{
-    this.isWordLoading = true;
     this.wordService.getAllWords().pipe(
       tap(() => {
         this.isWordLoading = false; 

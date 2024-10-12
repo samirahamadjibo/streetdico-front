@@ -1,10 +1,10 @@
-<div class="word" [ngClass]="{'isWordLoading': isWordLoading}">
+<div class="word" *ngIf="!isWordLoading">
     <div> <h5 class="name sd-underline-secondary">{{word.name}}</h5> </div>
     <div class="definition">
         <p>{{word.definition}}</p>
     </div>
     <div class="example py-2">
-        <span class="fs-underline">Exp:</span> <span>  {{word.example}}</span>
+        <span class="fs-underline">Exp:</span> <span>{{word.example}}</span>
     </div>
     <div class="infos">
         <div class="pb-2 pt-4 published-by">
@@ -21,4 +21,14 @@
             </span>
     </div>
     </div>
+</div>
+
+
+
+
+<div class="word" [ngClass]="{'isWordLoading': isWordLoading}" *ngIf="isWordLoading">
+    <div class="name"></div>
+    <div class="definition"></div>
+    <div class="example mt-1"></div>
+    <div class="infos mt-4"></div>
 </div>
