@@ -46,16 +46,16 @@ export class WordComponent implements OnInit{
 
   like(doLike: boolean){
     this.liked = !this.liked
-    this.wordService.like(doLike, this.word.id).subscribe((newCount: any) => {
-      this.word.likes_count = newCount[0].likes_count;
-    }); 
+    if (this.liked) this.word.likes_count = this.word.likes_count == null ? 1 : this.word.likes_count + 1;
+    if (!this.liked) this.word.likes_count = this.word.likes_count == null ? 1 : this.word.likes_count - 1;
+    this.wordService.like(doLike, this.word.id).subscribe(); 
   }
  
   dislike(doDislike: boolean){
     this.disliked = !this.disliked;
-    this.wordService.dislike(doDislike, this.word.id).subscribe((newCount: any) => {
-      this.word.dislikes_count = newCount[0].dislikes_count;
-    }); 
+    if (this.disliked) this.word.dislikes_count = this.word.dislikes_count == null ? 0 : this.word.dislikes_count + 1;
+    if (!this.disliked) this.word.dislikes_count = this.word.dislikes_count == null ? 0 : this.word.dislikes_count - 1;
+    this.wordService.dislike(doDislike, this.word.id).subscribe(); 
   }
 
 }
