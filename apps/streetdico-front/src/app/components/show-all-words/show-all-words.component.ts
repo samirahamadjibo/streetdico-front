@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WordService } from '../../services/word/word.service';
 import { Word } from '../../models/word';
-import { finalize } from 'rxjs';
+import { finalize, tap } from 'rxjs';
 
 @Component({
   selector: 'digitalvitae-show-all-words',
@@ -21,9 +21,11 @@ export class ShowAllWordsComponent implements OnInit {
   public itemsPerPage: number;
   public noNext: boolean;
   public isWordLoading = true;
+  public skeletonWords: Word[] = [];  
 
 
   ngOnInit(): void {
+    this.setSkeletonWords()
     this.getActiveWords();
   }
 
@@ -31,22 +33,42 @@ export class ShowAllWordsComponent implements OnInit {
     this.pageNumber = pageNumber;
   }
 
+  setSkeletonWords(){
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.skeletonWords.push(new Word)
+    this.pageWords = this.skeletonWords
+  }
+
   getActiveWords(){
     this.wordService.getPageWords(this.pageNumber, this.itemsPerPage).pipe(
+      tap(() => {
+        this.isWordLoading = false; 
+      }),
       finalize(() => {
-        this.isWordLoading = true;
+        this.isWordLoading = false;
       })
     ).subscribe((words: Word[]) => {
       window.scrollTo(0, 0);
       this.pageWords = words;
+
       if (this.pageWords.length < this.itemsPerPage ){
         this.noNext = true
       }
-
-      this.isWordLoading = false;
     });
   }
-
 
   previousPage(){
     if(this.pageNumber > 0){
