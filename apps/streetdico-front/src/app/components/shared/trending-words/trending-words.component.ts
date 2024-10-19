@@ -22,7 +22,7 @@ export class TrendingWordsComponent implements OnInit {
     this.skeletonWords.push(new Word)
     this.trendingWords = this.skeletonWords
   }
-
+ 
   getTrendingWords(): void{
     this.wordService.getAllWords().pipe(
       tap(() => {

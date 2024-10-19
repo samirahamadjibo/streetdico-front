@@ -34,6 +34,7 @@ export class ShowAllWordsComponent implements OnInit {
   }
 
   setSkeletonWords(){
+    this.isWordLoading = true;
     this.skeletonWords.push(new Word)
     this.skeletonWords.push(new Word)
     this.skeletonWords.push(new Word)
@@ -74,13 +75,15 @@ export class ShowAllWordsComponent implements OnInit {
     if(this.pageNumber > 0){
       this.pageNumber = this.pageNumber - 1;
       this.noNext = false;
-      
+
+      this.setSkeletonWords()
       this.getActiveWords()
     }
   }
 
   nextPage(){
       this.pageNumber = this.pageNumber +1;
+      this.setSkeletonWords()
       this.getActiveWords()
   }
 }
