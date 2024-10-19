@@ -1,14 +1,27 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <form [formGroup]="searchWordForm">
+            <form [formGroup]="searchWordForm" (ngSubmit)="onSubmit()">
                 <div class="my-4">
-                    <label for="homeSearchBar" class="form-label pb-2" > <span class="fs-sm">Recherche un mot</span> <span *ngIf="searchWordForm.invalid && searchWordForm.touched " class="fs-error fs-sm">- commence par taper quelque chose !</span> </label>
+                    <label for="homeSearchBar" class="form-label pb-2">
+                        <span class="fs-sm">Recherche un mot</span>
+                        <span *ngIf="searchWordForm.invalid && searchWordForm.touched" class="fs-error fs-sm">
+                            - commence par taper quelque chose !
+                        </span>
+                    </label>
                     <div class="input-group">
-                        <span class="sd-input-group-text"><i class="bi bi-search"></i></span>
-                        <input formControlName="name" type="text" class="sd-form-control search-bar home-search-bar" id="homeSearchBar" placeholder="Oui, c'est ici ..">
+                        <span class="sd-input-group-text">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input formControlName="name"
+                               type="text"
+                               class="sd-form-control search-bar home-search-bar"
+                               id="homeSearchBar"
+                               placeholder="Oui, c'est ici .."
+                               (keydown.enter)="onSubmit()">
                         <div class="d-flex align-items-center ms-3 sd-color-white">
-                            <button class="sd-btn-icon-primary fs-xl" type="button" (click)="onSubmit()">
+                            <button class="sd-btn-icon-primary fs-xl"
+                                    type="submit">
                                 <i class="bi bi-arrow-right-circle-fill ms-2"></i>
                             </button>
                         </div>
