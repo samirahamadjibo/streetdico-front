@@ -5,9 +5,14 @@
             <div class="sd-color-black fs-2 fw-bold ff-body text-center">Les derniers contributeurs</div>
             <div class="sd-undertitle">Ceux qui font la légende du dictionnaire urbain</div>
         </div>
-        <div class="col-11 home-publisher-row d-flex flex-wrap justify-content-center align-items-center pb-5">
+        <div class="col-11 home-publisher-row d-flex flex-wrap justify-content-center align-items-center pb-5" *ngIf="!isNameLoading">
             <div *ngFor="let publisher of publishersNameList" class="d-flex my-3 mx-2">
                 <span class="home-publisher-tag">{{publisher}}</span>
+            </div>
+        </div>
+        <div class="col-11 home-publisher-row d-flex flex-wrap justify-content-center align-items-center pb-5" *ngIf="isNameLoading">
+            <div *ngFor="let publisher of publishersNameList" class="d-flex my-3 mx-2">
+                <span class="home-publisher-tag" [ngClass]="{'isNameLoading': isNameLoading}">{{publisher}}</span>
             </div>
         </div>
     </div>

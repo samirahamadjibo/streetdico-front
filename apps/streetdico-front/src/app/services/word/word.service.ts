@@ -29,14 +29,12 @@ export class WordService {
   
   getWordFromName(name: string): Observable<Word[]>{    
     const getWordFromNameLevUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/search-word/lev?name=${name}`;
-    console.log(name);
-    
     return this.http.get<Word[]>(getWordFromNameLevUrl);
   }
 
-  getPublishersNameList(): Observable<string>{    
+  getPublishersNameList(): Observable<string[]>{    
     const getPublishersNameListUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/publisher-names`;
-    return this.http.get<string>(getPublishersNameListUrl);
+    return this.http.get<string[]>(getPublishersNameListUrl);
   }
 
   setDefinitionInProgress(definition : Word){
