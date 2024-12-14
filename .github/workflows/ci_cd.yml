@@ -47,7 +47,7 @@ jobs:
             aws-region: us-east-1
 
         - name: Download artefact
-          uses: actions/download-artifact@v2.1.1
+          uses: actions/download-artifact@v4.1.8
           with:
             name: streetdico-front-dev
             path: ./dist
