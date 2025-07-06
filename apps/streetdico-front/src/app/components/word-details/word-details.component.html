@@ -5,7 +5,7 @@
         <div class="col-12">
             <h1 *ngIf="isThereResult || isThereResult === undefined" class="ff-body fw-bold fs-2 mt-5">Résulats 
                 <span *ngIf="isThereResult === undefined">...</span> 
-                <span *ngIf="isThereResult">{{title}}</span> 
+                <span *ngIf="isThereResult"> pour "{{title}}"</span> 
             </h1>
             <h1 *ngIf="isThereResult === false" class="ff-body fw-bold fs-2 mt-5">Oh oh ... </h1>
         </div>

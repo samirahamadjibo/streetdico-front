@@ -40,7 +40,8 @@ const routes: Routes = [
     SearchBarComponent,
     SecondarySearchFieldComponent,
     TrendingWordsComponent,
-    WordComponent
+    WordComponent,
+    WordDetailsComponent
   ],
   imports: [
     RouterModule.forChild(routes),
@@ -64,7 +65,8 @@ const routes: Routes = [
     SearchBarComponent,
     SecondarySearchFieldComponent,
     TrendingWordsComponent,
-    WordComponent
+    WordComponent,
+    WordDetailsComponent
   ]
 })
 export class SharedModule { }

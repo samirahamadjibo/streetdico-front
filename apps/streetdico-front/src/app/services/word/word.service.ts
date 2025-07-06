@@ -8,13 +8,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class WordService {
   constructor(private http: HttpClient) {}
-  private allWordsUrl = 'https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/trending-words';
-
   definitionInProgress: Word | undefined;
 
 
   getAllWords(): Observable<Word[]>{
-    return this.http.get<Word[]>(this.allWordsUrl);
+    const allWordsUrl = 'https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/trending-words';
+    return this.http.get<Word[]>(allWordsUrl);
   }
 
   getPublisherName(publisherId: number): Observable<string>{    
@@ -24,6 +23,7 @@ export class WordService {
 
   getPageWords(pageNumber: number, itemsPerPage: number): Observable<Word[]>{    
     const getPageWordsUrl = `https://9bbxelsa9d.execute-api.eu-west-1.amazonaws.com/uat/all-words?page_number=${pageNumber}&items_per_page=${itemsPerPage}`;
+    console.log(pageNumber, itemsPerPage);
     return this.http.get<Word[]>(getPageWordsUrl);
   }
   
