@@ -29,9 +29,11 @@ export class SearchBarComponent{
       });
       
       this.router.navigate(['/word-details']);
+      window.scrollTo(0,0);
+      
       this.searchWordForm.reset()
     }
-    else {
+    else if(this.searchWordForm.dirty || this.searchWordForm.touched) {
       this.searchWordForm.markAsTouched()
     }
   }
