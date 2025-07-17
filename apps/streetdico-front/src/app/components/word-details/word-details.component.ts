@@ -35,9 +35,7 @@ export class WordDetailsComponent implements OnInit{
   }
 
   getSearchText(){
-    this.activeWordService.searchText$.subscribe((text: string) => {
-      this.title = text;
-    });
+    this.title = this.activeWordService.getSearchText()
   }
 
   getActiveWords(){
@@ -47,13 +45,10 @@ export class WordDetailsComponent implements OnInit{
       }),
       finalize(() => {
         this.isWordLoading = false;
-        window.scrollTo(0, 0);
       }),
     ).subscribe((words: Word[]) => {
       this.activeWords = words;
       this.isThereResult = this.activeWords.length != 0;
-      console.log(this.activeWords);
-      
     });    
   }
 }

@@ -28,10 +28,9 @@ export class SearchBarComponent{
         this.activeWordService.setActiveWords(results);
       });
       
-      this.router.navigate(['/word-details']);
-      window.scrollTo(0,0);
-      
       this.searchWordForm.reset()
+      this.router.navigate(['/word-details']);
+      window.scrollTo(0,0)
     }
     else if(this.searchWordForm.dirty || this.searchWordForm.touched) {
       this.searchWordForm.markAsTouched()

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Word } from '../../models/word';
-import { Observable, Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +9,7 @@ export class ActiveWordsService {
   private activeWords = new Subject<Word[]>();
   activeWords$ = this.activeWords.asObservable();
 
-  private searchText = new Subject<string>();
-  searchText$ = this.searchText.asObservable();
+  private searchText = ""
 
   getActiveWords(): Observable<Word[]>{
     return this.activeWords
@@ -21,7 +20,7 @@ export class ActiveWordsService {
   }
 
   setSearchText(text: string) {
-    this.searchText.next(text);
+    this.searchText = text
   }
 
   getSearchText() {
