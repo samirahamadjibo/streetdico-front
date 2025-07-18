@@ -12,7 +12,7 @@ export class WordDetailsComponent implements OnInit{
   constructor(private activeWordService: ActiveWordsService) {
     this.activeWords = [];
     this.isThereResult = undefined;
-    this.title ="";
+    this.title = "...";
   }
 
   public activeWords: Word[];
